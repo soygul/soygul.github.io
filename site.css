@@ -14,19 +14,18 @@ body {
   line-height: 1.42857;
 }
 
-img {
+a > img {
   margin-left: auto;
   margin-right: auto;
   display: block;
   max-width: 100%;
+  border: 1px solid lightgrey;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .home-button {
   float: right;
   color: darkblue;
   font-weight: bold;
-}
-
-.border {
-  border: 1px solid lightgrey;
 }
