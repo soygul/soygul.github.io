@@ -15,7 +15,7 @@ body {
 }
 
 a > img {
-  margin: auto 25px;
+  margin: 25px auto;
   display: block;
   max-width: 100%;
   border: 1px solid lightgrey;
