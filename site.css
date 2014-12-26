@@ -7,21 +7,18 @@ html {
 
 body {
   background-color: white;
+  margin: 1% 0.5%;
   padding: 1%;
-  margin: 1%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
 }
 
 a > img {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto 25px;
   display: block;
   max-width: 100%;
   border: 1px solid lightgrey;
-  margin-top: 25px;
-  margin-bottom: 25px;
 }
 
 .home-button {
