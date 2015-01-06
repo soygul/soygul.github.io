@@ -26,3 +26,8 @@ a > img {
   color: darkblue;
   font-weight: bold;
 }
+
+.tags small {
+  color: lightgrey;
+  margin-left: 10px;
+}
