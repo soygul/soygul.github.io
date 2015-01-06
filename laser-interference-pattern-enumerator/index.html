@@ -1,88 +1,245 @@
-<h2>Counting Laser Diffraction &amp; Interference Patterns Using LDR (Photoresistor)</h2>
-<p><a href="http://www.soygul.com/projects/laser-interference-pattern-enumerator/"><img class="alignleft size-full wp-image-463" style="margin-bottom: 0px; margin-right: 7px; border: none;" title="Laser Interference Pattern Enumerator" src="http://www.soygul.com/wp-content/uploads/2009/08/laser_interference_pattern_enumerator.jpg" alt="Laser Interference Pattern Enumerator" width="412" height="297" /></a><a title="Definition of &quot;Michelson Interferometer&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Michelson_interferometer">Michelson Interferometer</a> is best used in calculating the index of refraction of gasses and transparent matter (i.e. air and glass). Doing so requires counting each <a title="Definition of &quot;Interference&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Interference_%28wave_propagation%29">interference</a> circle one by one. As a matter of fact, getting a precise measurement requires counting up to a hundred circles which is almost impossible because circles move quite fast even when the measurement arm is winded as slow as possible. Even though it is quite hard for human eyes to follow such rapid movement, it makes a fairly easy <a title="Definition of &quot;Optoelectronics&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Optoelectronics">Optoelectronics</a> application. For that reason, I have designed an enumerator (image on top) for our lab, as a final project for Linear Electronics II class. Even though I have built the box for counting laser interference and diffraction patterns, it can enumerate all sorts of patterns given there is enough light. Personally, I have successfully counted patterns on a wooden desk, a very fine wire grid, a stamped concrete wall, and even the patterns on a Turkish carpet. Using the adjustment buttons gives the ability to adjust the circuit to any possible pattern transition thus making it useful for counting all kinds of patterns on any object.</p>
-<p style="text-align: justify; clear: both;"><img class="alignright size-full wp-image-481" title="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" src="http://www.soygul.com/wp-content/uploads/2009/08/laser_interference_patterns.jpg" alt="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" width="220" height="167" />For counting laser interference patterns like the ones to the right, this project provides an excellent resource. Not only will it be able to enumerate through the patterns at lightning speed (my LDR provided me with 30 switches per second), but it will also provide you with utmost tool for counting any other pattern and count them quite precisely.</p>
-<p>As I took a very straightforward approach into this design, the project content is below and all in one page, as you will easily be able to print this page and use it as a guide.</p>
-<!--more-->
-<p style="padding-left: 30px; clear: both;">1. <a href="#resources">Resources</a></p>
-<p style="padding-left: 30px;">2. <a href="#documentation">Ultimate Documentation: My Project Report</a>
-  <span style="padding-left: 30px;">2.1 <a href="#documentation_download">Where to Find It?</a></span>
-  <span style="padding-left: 30px;">2.2 </span><a href="#ieee_style_manual">2009 IEEE Standards Style Manual</a></p>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Laser Interference Pattern Enumerator</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+  <a class="home-button" href="/">Home</a>
+  <h1>Laser Interference Pattern Enumerator</h1>
+  <small>Aug 16, 2009</small>
+
+  <h2>Counting Laser Diffraction &amp; Interference Patterns Using LDR (Photoresistor)</h2>
+  <p>
+    <a href="http://www.soygul.com/projects/laser-interference-pattern-enumerator/">
+      <img class="alignleft size-full wp-image-463" style="margin-bottom: 0px; margin-right: 7px; border: none;" title="Laser Interference Pattern Enumerator" src="http://www.soygul.com/wp-content/uploads/2009/08/laser_interference_pattern_enumerator.jpg"
+      alt="Laser Interference Pattern Enumerator" width="412" height="297" />
+    </a><a title="Definition of &quot;Michelson Interferometer&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Michelson_interferometer">Michelson Interferometer</a> is best used in calculating the index of refraction of gasses and transparent matter
+    (i.e. air and glass). Doing so requires counting each <a title="Definition of &quot;Interference&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Interference_%28wave_propagation%29">interference</a> circle one by one. As a matter of fact, getting
+    a precise measurement requires counting up to a hundred circles which is almost impossible because circles move quite fast even when the measurement arm is winded as slow as possible. Even though it is quite hard for human eyes to follow such rapid
+    movement, it makes a fairly easy <a title="Definition of &quot;Optoelectronics&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Optoelectronics">Optoelectronics</a> application. For that reason, I have designed an enumerator (image on top) for
+    our lab, as a final project for Linear Electronics II class. Even though I have built the box for counting laser interference and diffraction patterns, it can enumerate all sorts of patterns given there is enough light. Personally, I have successfully
+    counted patterns on a wooden desk, a very fine wire grid, a stamped concrete wall, and even the patterns on a Turkish carpet. Using the adjustment buttons gives the ability to adjust the circuit to any possible pattern transition thus making it useful
+    for counting all kinds of patterns on any object.</p>
+  <p style="text-align: justify; clear: both;">
+    <img class="alignright size-full wp-image-481" title="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" src="http://www.soygul.com/wp-content/uploads/2009/08/laser_interference_patterns.jpg"
+    alt="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" width="220" height="167" />For counting laser interference patterns like the ones to the right, this project provides an excellent resource. Not only will it be able to enumerate through the patterns at lightning speed (my LDR provided me with 30 switches per second), but it
+    will also provide you with utmost tool for counting any other pattern and count them quite precisely.</p>
+  <p>As I took a very straightforward approach into this design, the project content is below and all in one page, as you will easily be able to print this page and use it as a guide.</p>
+  <!--more-->
+  <p style="padding-left: 30px; clear: both;">1. <a href="#resources">Resources</a>
+  </p>
+  <p style="padding-left: 30px;">2. <a href="#documentation">Ultimate Documentation: My Project Report</a>
+    <span style="padding-left: 30px;">2.1 <a href="#documentation_download">Where to Find It?</a>
+    </span>
+    <span style="padding-left: 30px;">2.2 </span><a href="#ieee_style_manual">2009 IEEE Standards Style Manual</a>
+  </p>
   <p style="padding-left: 30px;">3. <a href="#hardware_design">Hardware Design</a> (everything about what goes in the box)
-    <span style="padding-left: 30px;">3.1 <a href="#schematics_simulation">Schematics &amp; Simulation</a></span>
-    <span style="padding-left: 30px;">3.2 <a href="#circuit_design">Circuit Design</a></span>
-    <span style="padding-left: 30px;">3.3 <a href="#project_casing">Project Casing</a></span>
-    <span style="padding-left: 30px;">3.4 <a href="#test_setup">Test Setup</a></span></p>
-    <p style="padding-left: 30px;">4. <a href="#components">Components</a> (optional reading for in depth info)</p>
-    <p style="padding-left: 30px;">5. <a href="#calibration_usage">Calibration Guide &amp; User's Manual</a></p>
-    <p style="padding-left: 30px;">6. <a href="#special_thanks">Special Thanks</a></p>
+    <span style="padding-left: 30px;">3.1 <a href="#schematics_simulation">Schematics &amp; Simulation</a>
+    </span>
+    <span style="padding-left: 30px;">3.2 <a href="#circuit_design">Circuit Design</a>
+    </span>
+    <span style="padding-left: 30px;">3.3 <a href="#project_casing">Project Casing</a>
+    </span>
+    <span style="padding-left: 30px;">3.4 <a href="#test_setup">Test Setup</a>
+    </span>
+  </p>
+  <p style="padding-left: 30px;">4. <a href="#components">Components</a> (optional reading for in depth info)</p>
+  <p style="padding-left: 30px;">5. <a href="#calibration_usage">Calibration Guide &amp; User's Manual</a>
+  </p>
+  <p style="padding-left: 30px;">6. <a href="#special_thanks">Special Thanks</a>
+  </p>
 
-    <h2>1. <a name="resources"></a>Resources</h2>
-    If you ever intend to rebuild this project for your own use, below box contains every single file you need (schematics, simulation, documentation, etc.).
-    <div style="clear: both; background-image: url('/wp-content/uploads/2009/08/header_mask.png'); margin-left: auto; width: 650px; margin-right: auto; background-repeat: no-repeat; height: 282px;">
-      <div style="padding: 12px 0px 0px 18px;">
-        <div style="float: left; width: 157px;">
-          <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.pdf"><img class="size-full wp-image-654 alignleft" style="margin: 0px;" title="Laser Interference Pattern Enumerator Final Project Report" src="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.jpg" alt="Laser Interference Pattern Enumerator Final Project Report" width="157" height="220" /></a></div>
-          <div style="text-align: center;"><a href="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.pdf">Complete Project Report</a></div>
+  <h2>1.
+    <a name="resources"></a>Resources</h2>
+  If you ever intend to rebuild this project for your own use, below box contains every single file you need (schematics, simulation, documentation, etc.).
+  <div style="clear: both; background-image: url('/wp-content/uploads/2009/08/header_mask.png'); margin-left: auto; width: 650px; margin-right: auto; background-repeat: no-repeat; height: 282px;">
+    <div style="padding: 12px 0px 0px 18px;">
+      <div style="float: left; width: 157px;">
+        <div>
+          <a href="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.pdf">
+            <img class="size-full wp-image-654 alignleft" style="margin: 0px;" title="Laser Interference Pattern Enumerator Final Project Report" src="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.jpg"
+            alt="Laser Interference Pattern Enumerator Final Project Report" width="157" height="220" />
+          </a>
         </div>
-        <div style="float: left; margin-left: 22px;">
-          <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation.png"><img class="alignnone size-full wp-image-669" style="margin: 0px;" title="Enumerator Schematics &amp; Simulation" src="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation_vsmall.jpg" alt="Enumerator Schematics &amp; Simulation" width="230" height="136" /></a></div>
-          <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation.png">Complete Circuit Diagram</a>
-            If you need, <a href="http://www.soygul.com/wp-content/uploads/2009/08/Enumerator_Schematics.DSN"><span style="color: #ff0000;">here</span></a> is the same diagram
-            as Labcenter Proteus format which
-            can be simulated (.DSN). You can get
-            a trial of Labcenter Proteus <a href="http://www.labcenter.co.uk/download/prodemo_autodl_general.cfm"><span style="color: #ff0000;">here</span></a>.</div>
-          </div>
-          <div style="float: left; margin-left: 22px;">
-            <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/Calculating_the_Index_of-Refraction_of_Air_-_Lab_Report.pdf"><img class="alignnone size-full wp-image-593" style="margin: 0px;" title="Michelson Interferometer Test Setup - Sample Lab Report" src="http://www.soygul.com/wp-content/uploads/2009/08/lab_report_thumb.jpg" alt="Michelson Interferometer Test Setup - Sample Lab Report" width="100" height="144" /></a></div>
-            <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/Calculating_the_Index_of-Refraction_of_Air_-_Lab_Report.pdf">Sample Report</a>
-              Nice demonstration
-              w/ Michelson Int. and
-              this enumerator device.</div>
-            </div>
-          </div>
+        <div style="text-align: center;"><a href="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.pdf">Complete Project Report</a>
         </div>
-        <h2>2. <a name="documentation"></a>Ultimate Documentation: My Project Report</h2>
-        <p>As usual, every final project is accompanied by a great project report (to get a reward for all that hard work). The report itself is the ultimate documentation for this project as it contains an in depth analysis of the problem and the solution as well as the methods and tools used in the process. Although I have written the report all in Turkish (except the cover) as it was due submission to archives too, I tried to put as much information from it into the web page as possible. This page contains all the information needed to understand the project in depth and replicate it if needed but very specific information about the components used in the project are all in the project report. If you need, you can translate the .pdf file with Google translator from Turkish to English.</p>
+      </div>
+      <div style="float: left; margin-left: 22px;">
+        <div>
+          <a href="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation.png">
+            <img class="alignnone size-full wp-image-669" style="margin: 0px;" title="Enumerator Schematics &amp; Simulation" src="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation_vsmall.jpg" alt="Enumerator Schematics &amp; Simulation"
+            width="230" height="136" />
+          </a>
+        </div>
+        <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation.png">Complete Circuit Diagram</a> If you need,
+          <a href="http://www.soygul.com/wp-content/uploads/2009/08/Enumerator_Schematics.DSN">
+            <span style="color: #ff0000;">here</span>
+          </a> is the same diagram as Labcenter Proteus format which can be simulated (.DSN). You can get a trial of Labcenter Proteus
+          <a href="http://www.labcenter.co.uk/download/prodemo_autodl_general.cfm">
+            <span style="color: #ff0000;">here</span>
+          </a>.</div>
+      </div>
+      <div style="float: left; margin-left: 22px;">
+        <div>
+          <a href="http://www.soygul.com/wp-content/uploads/2009/08/Calculating_the_Index_of-Refraction_of_Air_-_Lab_Report.pdf">
+            <img class="alignnone size-full wp-image-593" style="margin: 0px;" title="Michelson Interferometer Test Setup - Sample Lab Report" src="http://www.soygul.com/wp-content/uploads/2009/08/lab_report_thumb.jpg" alt="Michelson Interferometer Test Setup - Sample Lab Report"
+            width="100" height="144" />
+          </a>
+        </div>
+        <div><a href="http://www.soygul.com/wp-content/uploads/2009/08/Calculating_the_Index_of-Refraction_of_Air_-_Lab_Report.pdf">Sample Report</a> Nice demonstration w/ Michelson Int. and this enumerator device.</div>
+      </div>
+    </div>
+  </div>
+  <h2>2.
+    <a name="documentation"></a>Ultimate Documentation: My Project Report</h2>
+  <p>As usual, every final project is accompanied by a great project report (to get a reward for all that hard work). The report itself is the ultimate documentation for this project as it contains an in depth analysis of the problem and the solution as
+    well as the methods and tools used in the process. Although I have written the report all in Turkish (except the cover) as it was due submission to archives too, I tried to put as much information from it into the web page as possible. This page contains
+    all the information needed to understand the project in depth and replicate it if needed but very specific information about the components used in the project are all in the project report. If you need, you can translate the .pdf file with Google
+    translator from Turkish to English.</p>
 
-        <h4>2.1 <a name="documentation_download"></a>Where to Find It?</h4>
-        <a href="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.pdf"><img class="alignleft size-full wp-image-654" style="margin: 3px 9px 5px 0px;" title="Laser Interference Pattern Enumerator Final Project Report" src="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.jpg" alt="Laser Interference Pattern Enumerator Final Project Report" width="56" height="79" /></a>Above in the resources box or on your left.
-        <h4 style="clear: both;">2.2 <a name="ieee_style_manual"></a>2009 IEEE Standards Style Manual</h4>
-        <p>Any engineer’s guide to technical writing is IEEE’s “<a title="IEEE Standards Style Manual" href="http://standards.ieee.org/guides/style/">Standards Style Manual</a>” (at least for electrical and computer related stuff). You can always find the latest version <a title="IEEE Standards Style Manual" href="http://standards.ieee.org/guides/style/">here</a> (or the 2009 version <a title="IEEE Standards Style Manual (2009)" href="http://www.soygul.com/wp-content/uploads/2009/08/IEEE_2009_Style_Manual.pdf">local copy here</a>). As it is a bit time consuming to get your report in IEEE’s shape, I personally use University of Sussex’s “<a href="http://www.sussex.ac.uk/engineering/1-3-11-2.html">Guide to Technical Report Writing</a>” (local copy <a href="http://www.soygul.com/wp-content/uploads/2009/08/Sussex_Guide_to_Technical_Report_Writing.pdf">here</a>) or when I am completely short of time I prefer something a lot more easier like <a href="http://ocw.mit.edu/NR/rdonlyres/Electrical-Engineering-and-Computer-Science/6-111Introductory-Digital-Systems-LaboratoryFall2002/156DB79A-984F-441E-AEDD-0B6AF6ECB3C2/0/reportgd.pdf">MIT’s digital systems lab report guide</a> (local copy <a href="http://www.soygul.com/wp-content/uploads/2009/08/MIT_Digital_Systems_Laboratory_Report_Guide.pdf">here</a>). Just for your information (as this is a question that I receive daily especially from the readers of my articles such as this one here).</p>
+  <h4>2.1
+    <a name="documentation_download"></a>Where to Find It?</h4>
+  <a href="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.pdf">
+    <img class="alignleft size-full wp-image-654" style="margin: 3px 9px 5px 0px;" title="Laser Interference Pattern Enumerator Final Project Report" src="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Final_Project_Report.jpg"
+    alt="Laser Interference Pattern Enumerator Final Project Report" width="56" height="79" />
+  </a>Above in the resources box or on your left.
+  <h4 style="clear: both;">2.2
+    <a name="ieee_style_manual"></a>2009 IEEE Standards Style Manual</h4>
+  <p>Any engineer’s guide to technical writing is IEEE’s “<a title="IEEE Standards Style Manual" href="http://standards.ieee.org/guides/style/">Standards Style Manual</a>” (at least for electrical and computer related stuff). You can always find the latest
+    version <a title="IEEE Standards Style Manual" href="http://standards.ieee.org/guides/style/">here</a> (or the 2009 version <a title="IEEE Standards Style Manual (2009)" href="http://www.soygul.com/wp-content/uploads/2009/08/IEEE_2009_Style_Manual.pdf">local copy here</a>).
+    As it is a bit time consuming to get your report in IEEE’s shape, I personally use University of Sussex’s “<a href="http://www.sussex.ac.uk/engineering/1-3-11-2.html">Guide to Technical Report Writing</a>” (local copy <a href="http://www.soygul.com/wp-content/uploads/2009/08/Sussex_Guide_to_Technical_Report_Writing.pdf">here</a>)
+    or when I am completely short of time I prefer something a lot more easier like <a href="http://ocw.mit.edu/NR/rdonlyres/Electrical-Engineering-and-Computer-Science/6-111Introductory-Digital-Systems-LaboratoryFall2002/156DB79A-984F-441E-AEDD-0B6AF6ECB3C2/0/reportgd.pdf">MIT’s digital systems lab report guide</a>    (local copy <a href="http://www.soygul.com/wp-content/uploads/2009/08/MIT_Digital_Systems_Laboratory_Report_Guide.pdf">here</a>). Just for your information (as this is a question that I receive daily especially from the readers of my articles such
+    as this one here).</p>
 
-        <h2>3. <a name="hardware_design"></a>Hardware Design</h2>
-        <p>Again, all the files you will need if you even want to rebuild this project is posted above in the resources box. They are also presented in text, in case you missed something.</p>
+  <h2>3.
+    <a name="hardware_design"></a>Hardware Design</h2>
+  <p>Again, all the files you will need if you even want to rebuild this project is posted above in the resources box. They are also presented in text, in case you missed something.</p>
 
-        <h4>3.1 <a name="schematics_simulation"></a>Schematics &amp; Simulation</h4>
-        <p><a href="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation.png"><img class="size-full wp-image-545 aligncenter" style="margin-top: 10px; margin-bottom: 5px;" title="Enumerator Schematics &amp; Simulation" src="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation_small.png" alt="Enumerator Schematics &amp; Simulation (small)" width="650" height="383" /></a></p>
-        <p>Above is the complete schematics in .png format (click on the image for full size). The above circuit diagram is drawn with Labcenter Proteus, which provides full simulation features for this sort of circuits. Look at how the light source and LDR are simulated. You can easily move the light source away from or towards the <acronym title="Ligth Dependent Resistor or Photoresistor">LDR</acronym> and see how the circuit reacts to changes in light intensity (as in pattern transitions like moving from darker side of a pattern to a lighter portion of it). One full cycle (moving from dark to light and then back to dark) will act as a trigger and counter will increment by one. If you want to test it for yourself, <a href="http://www.soygul.com/wp-content/uploads/2009/08/Enumerator_Schematics.DSN">here is the full schematics file in .DSN format</a>, which you will need at least a demo version of Labcenter Proteus VSM suite which can be <a title="Labcenter Proteus VSM Suite Demo Download" href="http://www.labcenter.co.uk/download/prodemo_autodl_general.cfm">downloaded here</a>.</p>
-        <p>You can see that I chose <a title="Explanation of &quot;CMOS 4026&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/4026#4026_counter_and_display_decoder">4026</a> counter and display decoder from CMOS 4000 series as it is one of the best ICs out there to provide counter and decoder functions in a single package. Each one of the chips has the ability to count up to 9 (including zero). Using three of them gives (10*10*10)-1=999 which is more than enough for counting repeating patterns like that of laser interference. If you want, you can read the "<a href="#components">Components</a>" section below for in depth info about the components used in this circuit diagram (i.e. 4026, LDR, Linear POT, 7-segment LED, etc.). Note that this circuit is meant to work with a default 5V input but in reality, anything between 3V to 15V will be all right (i.e. 4xAA batteries for my case).</p>
+  <h4>3.1
+    <a name="schematics_simulation"></a>Schematics &amp; Simulation</h4>
+  <p>
+    <a href="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation.png">
+      <img class="size-full wp-image-545 aligncenter" style="margin-top: 10px; margin-bottom: 5px;" title="Enumerator Schematics &amp; Simulation" src="http://www.soygul.com/wp-content/uploads/2009/08/enumerator_schematics_simulation_small.png" alt="Enumerator Schematics &amp; Simulation (small)"
+      width="650" height="383" />
+    </a>
+  </p>
+  <p>Above is the complete schematics in .png format (click on the image for full size). The above circuit diagram is drawn with Labcenter Proteus, which provides full simulation features for this sort of circuits. Look at how the light source and LDR are
+    simulated. You can easily move the light source away from or towards the
+    <acronym title="Ligth Dependent Resistor or Photoresistor">LDR</acronym> and see how the circuit reacts to changes in light intensity (as in pattern transitions like moving from darker side of a pattern to a lighter portion of it). One full cycle (moving from dark to light and then back to dark) will act
+    as a trigger and counter will increment by one. If you want to test it for yourself, <a href="http://www.soygul.com/wp-content/uploads/2009/08/Enumerator_Schematics.DSN">here is the full schematics file in .DSN format</a>, which you will need at least
+    a demo version of Labcenter Proteus VSM suite which can be <a title="Labcenter Proteus VSM Suite Demo Download" href="http://www.labcenter.co.uk/download/prodemo_autodl_general.cfm">downloaded here</a>.</p>
+  <p>You can see that I chose <a title="Explanation of &quot;CMOS 4026&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/4026#4026_counter_and_display_decoder">4026</a> counter and display decoder from CMOS 4000 series as it is one of the best ICs out
+    there to provide counter and decoder functions in a single package. Each one of the chips has the ability to count up to 9 (including zero). Using three of them gives (10*10*10)-1=999 which is more than enough for counting repeating patterns like
+    that of laser interference. If you want, you can read the "<a href="#components">Components</a>" section below for in depth info about the components used in this circuit diagram (i.e. 4026, LDR, Linear POT, 7-segment LED, etc.). Note that this circuit
+    is meant to work with a default 5V input but in reality, anything between 3V to 15V will be all right (i.e. 4xAA batteries for my case).</p>
 
-        <h4>3.2 <a name="circuit_design"></a>Circuit Design</h4>
-        <p><img class="alignleft size-full wp-image-557" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_1.jpg" alt="circuit_board_1" width="416" height="202" />Even though Labcenter Proteus software allows easily converting circuit diagrams into <acronym title="Printed Circuit Board">PCB</acronym> layouts, I decided to use a basic stripboard with copper soldering pads on each hole (which is actually called a perfboard). This way I avoided going to an electronics shop to print the circuit board. This is a relatively simple circuit so stripboard fits in nicely but anyone intending to go with the PCB, demo version of Proteus can be used to convert the circuit diagram into a circuit board.</p>
-        <p style="clear: both; text-align: justify;"><a href="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_2.jpg"><img class="alignleft size-medium wp-image-560" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_2-300x170.jpg" alt="" width="300" height="170" /></a>The entire circuit diagram can be fitted into a single piece of 11x6 cm (~4.3x2.4 in) stripboard. Above picture displays the whole counter circuit in place (which is actually the whole digital part of this circuit). You can easily find generic plastic boxes for each stripboard size in many electronics shops. The picture on the left shows how nicely the board fits into its box after come shaping on the corners and in the middle.</p>
-        <p style="clear: both; text-align: justify;"><a href="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_3.jpg"><img class="alignleft size-medium wp-image-565" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_3-300x125.jpg" alt="" width="300" height="125" /></a>This circuit is obviously an analog digital mixed one. Thus, it is always a good idea to test the two separate parts where possible. On the stripboard, I have implemented the digital portion first. It is quite easy to see if the digital counter functions all right, with the “+1” button. You can also see that I have added a trimpod between the cathodes of the LEDs and the circuit ground. This way it is easier to adjust the brightness of the LEDs though not necessary as I used 4xAA series batteries as the power source.</p>
+  <h4>3.2
+    <a name="circuit_design"></a>Circuit Design</h4>
+  <p>
+    <img class="alignleft size-full wp-image-557" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_1.jpg" alt="circuit_board_1" width="416" height="202" />Even though Labcenter Proteus software allows easily converting circuit diagrams into
+    <acronym title="Printed Circuit Board">PCB</acronym> layouts, I decided to use a basic stripboard with copper soldering pads on each hole (which is actually called a perfboard). This way I avoided going to an electronics shop to print the circuit board. This is a relatively simple circuit
+    so stripboard fits in nicely but anyone intending to go with the PCB, demo version of Proteus can be used to convert the circuit diagram into a circuit board.</p>
+  <p style="clear: both; text-align: justify;">
+    <a href="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_2.jpg">
+      <img class="alignleft size-medium wp-image-560" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_2-300x170.jpg" alt="" width="300" height="170" />
+    </a>The entire circuit diagram can be fitted into a single piece of 11x6 cm (~4.3x2.4 in) stripboard. Above picture displays the whole counter circuit in place (which is actually the whole digital part of this circuit). You can easily find generic plastic
+    boxes for each stripboard size in many electronics shops. The picture on the left shows how nicely the board fits into its box after come shaping on the corners and in the middle.</p>
+  <p style="clear: both; text-align: justify;">
+    <a href="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_3.jpg">
+      <img class="alignleft size-medium wp-image-565" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/circuit_board_3-300x125.jpg" alt="" width="300" height="125" />
+    </a>This circuit is obviously an analog digital mixed one. Thus, it is always a good idea to test the two separate parts where possible. On the stripboard, I have implemented the digital portion first. It is quite easy to see if the digital counter functions
+    all right, with the “+1” button. You can also see that I have added a trimpod between the cathodes of the LEDs and the circuit ground. This way it is easier to adjust the brightness of the LEDs though not necessary as I used 4xAA series batteries
+    as the power source.</p>
 
-        <h4 style="clear: both;">3.3 <a name="project_casing"></a>Project Casing</h4>
-        <p><a href="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_1.jpg"><img class="alignleft size-medium wp-image-570" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_1-300x171.jpg" alt="" width="300" height="171" /></a>For the project casing, I recommend a rectangular box that fits the stripboard on the sides. That way, it will not be obligatory to glue the board to the box but simply screw through it. Actually, below image is quite self-explanatory.</p>
-        <p style="clear: both; text-align: justify;"><a href="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_2.jpg"><img class="alignleft size-medium wp-image-571" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_2-300x175.jpg" alt="" width="300" height="175" /></a>In this final image, you can see that bolts and nuts are used to fasten the circuit board to the front panel of the project casing. Of course, you will need to drill the holes in the front panel first before placing the board on it. I personally prefer using hot soldering iron for any cutting and drilling business. That does not exactly give the best results, as it is obvious from the topmost image of the complete project; it is a pretty fast method for prototyping purposes like this one. You will note with this final image that the circuit is complete. Once the digital portion of it is done, analog sensor part is quite fast to integrate being loyal to the schematics. Though drilling the stripboard for POTs may be a bit tricky because it is easily broken, so be careful. Sorry that I cannot give detailed instructions on mechanical parts as it is mostly up to your abilities to accomplish all these drilling and cutting business w/ limited tools.</p>
+  <h4 style="clear: both;">3.3
+    <a name="project_casing"></a>Project Casing</h4>
+  <p>
+    <a href="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_1.jpg">
+      <img class="alignleft size-medium wp-image-570" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_1-300x171.jpg" alt="" width="300" height="171" />
+    </a>For the project casing, I recommend a rectangular box that fits the stripboard on the sides. That way, it will not be obligatory to glue the board to the box but simply screw through it. Actually, below image is quite self-explanatory.</p>
+  <p style="clear: both; text-align: justify;">
+    <a href="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_2.jpg">
+      <img class="alignleft size-medium wp-image-571" style="margin-bottom: 0px; margin-right: 10px;" src="http://www.soygul.com/wp-content/uploads/2009/08/project_casing_2-300x175.jpg" alt="" width="300" height="175" />
+    </a>In this final image, you can see that bolts and nuts are used to fasten the circuit board to the front panel of the project casing. Of course, you will need to drill the holes in the front panel first before placing the board on it. I personally prefer
+    using hot soldering iron for any cutting and drilling business. That does not exactly give the best results, as it is obvious from the topmost image of the complete project; it is a pretty fast method for prototyping purposes like this one. You will
+    note with this final image that the circuit is complete. Once the digital portion of it is done, analog sensor part is quite fast to integrate being loyal to the schematics. Though drilling the stripboard for POTs may be a bit tricky because it is
+    easily broken, so be careful. Sorry that I cannot give detailed instructions on mechanical parts as it is mostly up to your abilities to accomplish all these drilling and cutting business w/ limited tools.</p>
 
-        <h4 style="clear: both;">3.4 <a name="test_setup"></a>Test Setup</h4>
-        <img class="aligncenter size-full wp-image-577" style="margin-top: 10px; margin-bottom: 5px;" title="Michelson Interferometer Setup for Testing" src="http://www.soygul.com/wp-content/uploads/2009/08/michelson_setup.png" alt="Michelson Interferometer Setup for Testing" width="655" height="364" />
-        <p>For the purposes of this project, one of the best ways to test the integrity of all the circuit is to use a real pattern generator like Michelson Interferometer. Counting all the patterns combined with the correct formulation provides a basic method for calculating the index of refraction of gaseous matter (i.e. air) or transparent matter (i.e. crown glass). The above diagram is the most basic form of Michelson Interferometer that best suits this job. The sample pattern on the right corner is the one you should be seeing while using this device (pretty commonly used in optics labs). Using the pattern enumerator, counting the number of circles disappearing and reappearing in the middle of the screen is quite easy. Since the sensitivity of the detector can be easily re-adjusted and bright spot in the middle of the screen creates a very nice pattern transition section, <a title="Calculating the Index of Refraction of Air - Lab Report" href="http://www.soygul.com/wp-content/uploads/2009/08/Calculating_the_Index_of-Refraction_of_Air_-_Lab_Report.pdf"><img class="alignleft size-full wp-image-593" style="margin: 7px 7px 0px 0px;" src="http://www.soygul.com/wp-content/uploads/2009/08/lab_report_thumb.jpg" alt="" width="100" height="144" /></a>taking measurements right there is quite easy. Measuring the index of refraction of a matter with an already known <em>n</em> provides the best means of testing the functionality of our newly built pattern counter. The sample lab report to the left is a solid example of how to make the best use of this pattern enumerator in optics. The basic principle used throughout the calculations in the report is the fact that number of circles passing through a single point on the screen is directly related to the change in the index of refraction of de-pressurized air in the pressure chamber. Such that: <img class="aligncenter size-full wp-image-599" src="http://www.soygul.com/wp-content/uploads/2009/08/refraction_pattern_equation.png" alt="" width="146" height="42" /></p>
-        <p style="text-align: justify; clear: both;">For situations where this project is built for other purposes than using it in conjunction to an interferometer, any simple dark-light test will tell you something about how well your circuit is responding to light intensity changes (thus pattern transitions, which is what you want). Below video depicts such a case, where a single torch is used as a test case. Simply waving the torch right before the sensor is enough to tell if the counter if functional. Since every other LDR comes with different saturation/de-saturation timing characteristics, combining a couple of torches and creating a cascaded effect will be of great help in measuring the response speed in terms of switches per second.</p>
+  <h4 style="clear: both;">3.4
+    <a name="test_setup"></a>Test Setup</h4>
+  <img class="aligncenter size-full wp-image-577" style="margin-top: 10px; margin-bottom: 5px;" title="Michelson Interferometer Setup for Testing" src="http://www.soygul.com/wp-content/uploads/2009/08/michelson_setup.png" alt="Michelson Interferometer Setup for Testing"
+  width="655" height="364" />
+  <p>For the purposes of this project, one of the best ways to test the integrity of all the circuit is to use a real pattern generator like Michelson Interferometer. Counting all the patterns combined with the correct formulation provides a basic method
+    for calculating the index of refraction of gaseous matter (i.e. air) or transparent matter (i.e. crown glass). The above diagram is the most basic form of Michelson Interferometer that best suits this job. The sample pattern on the right corner is
+    the one you should be seeing while using this device (pretty commonly used in optics labs). Using the pattern enumerator, counting the number of circles disappearing and reappearing in the middle of the screen is quite easy. Since the sensitivity
+    of the detector can be easily re-adjusted and bright spot in the middle of the screen creates a very nice pattern transition section,
+    <a title="Calculating the Index of Refraction of Air - Lab Report" href="http://www.soygul.com/wp-content/uploads/2009/08/Calculating_the_Index_of-Refraction_of_Air_-_Lab_Report.pdf">
+      <img class="alignleft size-full wp-image-593" style="margin: 7px 7px 0px 0px;" src="http://www.soygul.com/wp-content/uploads/2009/08/lab_report_thumb.jpg" alt="" width="100" height="144" />
+    </a>taking measurements right there is quite easy. Measuring the index of refraction of a matter with an already known
+    <em>n</em> provides the best means of testing the functionality of our newly built pattern counter. The sample lab report to the left is a solid example of how to make the best use of this pattern enumerator in optics. The basic principle used throughout
+    the calculations in the report is the fact that number of circles passing through a single point on the screen is directly related to the change in the index of refraction of de-pressurized air in the pressure chamber. Such that:
+    <img class="aligncenter size-full wp-image-599"
+    src="http://www.soygul.com/wp-content/uploads/2009/08/refraction_pattern_equation.png" alt="" width="146" height="42" />
+  </p>
+  <p style="text-align: justify; clear: both;">For situations where this project is built for other purposes than using it in conjunction to an interferometer, any simple dark-light test will tell you something about how well your circuit is responding to light intensity changes (thus pattern transitions,
+    which is what you want). Below video depicts such a case, where a single torch is used as a test case. Simply waving the torch right before the sensor is enough to tell if the counter if functional. Since every other LDR comes with different saturation/de-saturation
+    timing characteristics, combining a couple of torches and creating a cascaded effect will be of great help in measuring the response speed in terms of switches per second.</p>
 
-        <div style="text-align: center;"><iframe src="//www.youtube.com/embed/XtLcMCe5Al8?rel=0" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
-        <h3 style="clear: both;">4. <a name="components"></a>Components</h2>
-        <p><img class="alignright size-full wp-image-628" src="http://www.soygul.com/wp-content/uploads/2009/08/ldr.jpg" alt="" width="150" height="91" />The choice of using a LDR (light dependent resistor, photoresistor) as the light sensing component of this circuit is based entirely on the response characteristics. LDR has a pretty rapid response to changes in the light intensity which makes it an ideal choice for this project. In addition, since LDR has way lower resistance compared to photodiode when fully illuminated.</p>
-        <p style="text-align: justify; clear: both;"><img class="alignright size-full wp-image-633" src="http://www.soygul.com/wp-content/uploads/2009/08/4026_chip.jpg" alt="" width="150" height="179" />4026 counter/decoder chip is basically the most important digital part in this circuit. As it is a <acronym title="Complementary Metal–Oxide–Semiconductor">CMOS</acronym> series of chip, it has a very wide range of operation in terms of input voltage. Any input voltage between 3V and 15V will be sufficient for this chip to be fully functional (anything above 20V will fry the chip). For that reason, I didn’t specify the input voltages in the schematics. 4xAA batteries, any 6V - 12V wall adapter, or a cell phone charger will be more than enough. As with any CMOS chip, 4026 have very high impedance at input pins. Due to that reason, any input pin left without a connection will float freely (i.e. it will rapidly switch between 0 and 1). To prevent that, any unused input should be connected to circuit ground. If you remain loyal to the provided circuit diagram, there should be no problem in this compartment.</p>
-        <p style="text-align: justify; clear: both;"><img class="alignright size-full wp-image-635" src="http://www.soygul.com/wp-content/uploads/2009/08/7_segment_display.jpg" alt="" width="179" height="130" />The pinout diagram on the right is provided for a common anode 7 segment led display. For this project, I have used common cathode display, which is only the cathode/anode reversed version. This was necessary because 4026 outputs positive signal (ex: +5V). So anyone intending to rebuild this project should go with “common cathode 7-seg led displays” (3 of them).</p>
-        <p style="text-align: justify; clear: both;"><img class="alignright size-full wp-image-636" src="http://www.soygul.com/wp-content/uploads/2009/08/pot_lin.jpg" alt="" width="90" height="90" /><a name="components_POT"></a>As for the light intensity calibration purposes, two 10K linear POTs are used like the one on the right are used. First POT is connected in series with the LDR and is used for filtering the ambiance light, hence the question; “How dark is dark?”. For situations where readings will not be taken from patterns projected on the screen but the patterns will be counted on real surfaces (like a metal board or even a stonewall or a cat’s fur!), adjusting this pot fine tunes the circuit to “sense” the darker portion of the pattern and differentiate it from the brighter side (in electronic sense, you are just adjusting the resistance of the <acronym title="Clock input pulse">CLK</acronym> pulse threshold in terms of Ohms as seen from the circuit diagram). As you could guess, sensing this darker portion of the pattern will generate a digital equivalent of “0”. The second POT is used to adjust the circuit to match the brightness of the lighter side of the pattern or the intensity of the laser used (basically you are adjusting the value of the pull-down resistor). The first setting (the blue switch) is less crucial but it is still useful in situations where the darker side of the pattern is actually not that dark which may be due to faded colors or ambiance light. In most cases, just adjusting the second (red) switch and leaving the blue switch at "MIN" will be enough. <em>(see the calibration guide below for details)</em></p>
-        <p style="text-align: justify; clear: both;"><img class="alignright size-full wp-image-639" src="http://www.soygul.com/wp-content/uploads/2009/08/push_buttons.jpg" alt="" width="140" height="87" />Finally, two momentary action SPST (single pole single throw) switches are used as “+1” and “Reset” buttons. “+1” button is especially useful for testing the functionality of the device before starting to take any measurements. These are very common and very easy to find buttons and can be used without any additional cover (like I did).</p>
+  <div style="text-align: center;">
+    <iframe src="//www.youtube.com/embed/XtLcMCe5Al8?rel=0" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+  </div>
+  <h2 style="clear: both;">4.
+    <a name="components"></a>Components</h2>
+  <p>
+    <img class="alignright size-full wp-image-628" src="http://www.soygul.com/wp-content/uploads/2009/08/ldr.jpg" alt="" width="150" height="91" />The choice of using a LDR (light dependent resistor, photoresistor) as the light sensing component of this circuit is based entirely on the response characteristics. LDR has a pretty rapid response to changes in the light intensity which makes it
+    an ideal choice for this project. In addition, since LDR has way lower resistance compared to photodiode when fully illuminated.</p>
+  <p style="text-align: justify; clear: both;">
+    <img class="alignright size-full wp-image-633" src="http://www.soygul.com/wp-content/uploads/2009/08/4026_chip.jpg" alt="" width="150" height="179" />4026 counter/decoder chip is basically the most important digital part in this circuit. As it is a
+    <acronym title="Complementary Metal–Oxide–Semiconductor">CMOS</acronym> series of chip, it has a very wide range of operation in terms of input voltage. Any input voltage between 3V and 15V will be sufficient for this chip to be fully functional (anything above 20V will fry the chip). For that reason, I
+    didn’t specify the input voltages in the schematics. 4xAA batteries, any 6V - 12V wall adapter, or a cell phone charger will be more than enough. As with any CMOS chip, 4026 have very high impedance at input pins. Due to that reason, any input pin
+    left without a connection will float freely (i.e. it will rapidly switch between 0 and 1). To prevent that, any unused input should be connected to circuit ground. If you remain loyal to the provided circuit diagram, there should be no problem in
+    this compartment.</p>
+  <p style="text-align: justify; clear: both;">
+    <img class="alignright size-full wp-image-635" src="http://www.soygul.com/wp-content/uploads/2009/08/7_segment_display.jpg" alt="" width="179" height="130" />The pinout diagram on the right is provided for a common anode 7 segment led display. For this project, I have used common cathode display, which is only the cathode/anode reversed version. This was necessary because 4026 outputs positive signal (ex:
+    +5V). So anyone intending to rebuild this project should go with “common cathode 7-seg led displays” (3 of them).</p>
+  <p style="text-align: justify; clear: both;">
+    <img class="alignright size-full wp-image-636" src="http://www.soygul.com/wp-content/uploads/2009/08/pot_lin.jpg" alt="" width="90" height="90" />
+    <a name="components_POT"></a>As for the light intensity calibration purposes, two 10K linear POTs are used like the one on the right are used. First POT is connected in series with the LDR and is used for filtering the ambiance light, hence the question; “How dark is dark?”.
+    For situations where readings will not be taken from patterns projected on the screen but the patterns will be counted on real surfaces (like a metal board or even a stonewall or a cat’s fur!), adjusting this pot fine tunes the circuit to “sense”
+    the darker portion of the pattern and differentiate it from the brighter side (in electronic sense, you are just adjusting the resistance of the
+    <acronym title="Clock input pulse">CLK</acronym> pulse threshold in terms of Ohms as seen from the circuit diagram). As you could guess, sensing this darker portion of the pattern will generate a digital equivalent of “0”. The second POT is used to adjust the circuit to match the brightness
+    of the lighter side of the pattern or the intensity of the laser used (basically you are adjusting the value of the pull-down resistor). The first setting (the blue switch) is less crucial but it is still useful in situations where the darker side
+    of the pattern is actually not that dark which may be due to faded colors or ambiance light. In most cases, just adjusting the second (red) switch and leaving the blue switch at "MIN" will be enough.
+    <em>(see the calibration guide below for details)</em>
+  </p>
+  <p style="text-align: justify; clear: both;">
+    <img class="alignright size-full wp-image-639" src="http://www.soygul.com/wp-content/uploads/2009/08/push_buttons.jpg" alt="" width="140" height="87" />Finally, two momentary action SPST (single pole single throw) switches are used as “+1” and “Reset” buttons. “+1” button is especially useful for testing the functionality of the device before starting to take any measurements. These are very common
+    and very easy to find buttons and can be used without any additional cover (like I did).</p>
 
-        <h3 style="clear: both;">5. <a name="calibration_usage"></a>Calibration Guide &amp; User's Manual</h2>
-        <p><img class="alignright size-full wp-image-646" title="Laser Interference Pattern Enumerator - Front" src="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Front.jpg" alt="Laser Interference Pattern Enumerator - Front" width="313" height="174" />Actually I have already said enough about how to use the blue and red calibration switches on the device, above in the <a href="#components_POT">components section</a> where I explained the purposes of the POTs used in the circuit. These two calibration switches adjust the circuit’s sensitivity to the intensity of darkness and brightness. To begin the calibration, turn the two switches clockwise all to the way to the “MIN” labels. Then move the sensor so that it directly faces the bright spot in the middle of the interferometer interference circles (or in case or regular pattern counting, move the sensor to the brighter side of the pattern). Making sure that the device is all stable, start turning the red switch counterclockwise towards the “MAX” label. Along the way, the counter will increment by one. That exact point is the one that makes your circuit best fit for sensing the bright spot. Do not move the counter from its position because you will be repeating the same process with the blue switch. Again, the counter will increment by one at somewhere going counterclockwise. This means that it is needed to calibrate both of the switches only when viewing the maximum light (or brightest region of the pattern). The reason that you are adjusting both of the dark and bright calibration option while the device faces the brightest spot (or brightest half of the pattern) is due to the fact that the sensing circuit best functions at the two edges of the pattern transition regions. I know this sounds a bit complex and you are free to add your questions below using the comment form.</p>
-        <p>CMOS circuitry is highly sensitive to static electric, which every plastic casing will be invulnerable to. Due to this, your counter may sometimes go crazy in the middle of a measurement due to static electric charge. Just to be on the safe side, clear your counter a couple of times using the “Reset” button before taking any measurements as it grounds all the CMOS chips and LEDs in the circuit which will prevent any inconvenience.</p>
-        <p>As for the batteries, the device consumes 25mA @ 5V on average so generic 2000 mAh rechargeable batteries should provide you with 80 hours of runtime. Due to this, it may be a waste to use expensive rechargeable batteries and go with alkaline batteries. The case can easily be unscrewed to replace the batteries once in every couple of years.</p>
+  <h2 style="clear: both;">5.
+    <a name="calibration_usage"></a>Calibration Guide &amp; User's Manual</h2>
+  <p>
+    <img class="alignright size-full wp-image-646" title="Laser Interference Pattern Enumerator - Front" src="http://www.soygul.com/wp-content/uploads/2009/08/Laser_Interference_Pattern_Enumerator_Front.jpg" alt="Laser Interference Pattern Enumerator - Front"
+    width="313" height="174" />Actually I have already said enough about how to use the blue and red calibration switches on the device, above in the <a href="#components_POT">components section</a> where I explained the purposes of the POTs used in the circuit. These two calibration
+    switches adjust the circuit’s sensitivity to the intensity of darkness and brightness. To begin the calibration, turn the two switches clockwise all to the way to the “MIN” labels. Then move the sensor so that it directly faces the bright spot in
+    the middle of the interferometer interference circles (or in case or regular pattern counting, move the sensor to the brighter side of the pattern). Making sure that the device is all stable, start turning the red switch counterclockwise towards the
+    “MAX” label. Along the way, the counter will increment by one. That exact point is the one that makes your circuit best fit for sensing the bright spot. Do not move the counter from its position because you will be repeating the same process with
+    the blue switch. Again, the counter will increment by one at somewhere going counterclockwise. This means that it is needed to calibrate both of the switches only when viewing the maximum light (or brightest region of the pattern). The reason that
+    you are adjusting both of the dark and bright calibration option while the device faces the brightest spot (or brightest half of the pattern) is due to the fact that the sensing circuit best functions at the two edges of the pattern transition regions.
+    I know this sounds a bit complex and you are free to add your questions below using the comment form.</p>
+  <p>CMOS circuitry is highly sensitive to static electric, which every plastic casing will be invulnerable to. Due to this, your counter may sometimes go crazy in the middle of a measurement due to static electric charge. Just to be on the safe side, clear
+    your counter a couple of times using the “Reset” button before taking any measurements as it grounds all the CMOS chips and LEDs in the circuit which will prevent any inconvenience.</p>
+  <p>As for the batteries, the device consumes 25mA @ 5V on average so generic 2000 mAh rechargeable batteries should provide you with 80 hours of runtime. Due to this, it may be a waste to use expensive rechargeable batteries and go with alkaline batteries.
+    The case can easily be unscrewed to replace the batteries once in every couple of years.</p>
 
-        <h3 style="clear: both;">6. <a name="special_thanks"></a>Special Thanks</h2>
-        <p>I would like to thank <a href="mailto:aaksoy@eng.ankara.edu.tr">Avni Aksoy Ph.D.</a>, <a href="mailto:ukurum@eng.ankara.edu.tr">Ulaş Kürüm Ph.D.</a>, and my advisor <a href="mailto:nserin@eng.ankara.edu.tr">Prof. Dr. Necmi Serin</a> for their unprecedented support in this year’s never-ending projects.</p>
+  <h2 style="clear: both;">6.
+    <a name="special_thanks"></a>Special Thanks</h2>
+  <p>I would like to thank <a href="mailto:aaksoy@eng.ankara.edu.tr">Avni Aksoy Ph.D.</a>, <a href="mailto:ukurum@eng.ankara.edu.tr">Ulaş Kürüm Ph.D.</a>, and my advisor <a href="mailto:nserin@eng.ankara.edu.tr">Prof. Dr. Necmi Serin</a> for their unprecedented
+    support in this year’s never-ending projects.</p>
+</body>
+
+</html>

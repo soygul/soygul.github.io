@@ -1,71 +1,117 @@
-<p><a href="http://www.soygul.com/projects/nbug/"><img class="alignleft size-full wp-image-1326" style="margin-bottom: 0px;" title="NBug" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/NBug_logo.png" width="250" height="92" /></a>NBug is an open-source .NET library created to automate the bug reporting process. It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack trace and additional system information. It can also be set up as a user feedback system (i.e. for user feature requests). I have created NBug project to act as the error-reporting agent for <a title="NBusy - Communicator for the business minded.." href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come. It is currently provided with LGPLv3 license and the source-code is hosted at <a title="NBug Source Code Repository" href="http://nbug.codeplex.com/">CodePlex</a>. You can also use the <a title="NBug NuGet Package" href="http://nuget.org/List/Packages/NBug">NuGet</a> package to easily integrate NBug into your project. Read on to learn how start making use of NBug in your projects.</p>
-<!--more-->
-<h3 style="text-align: justify;">Quickstart</h2>
-<p>Looking into <a title="Google Breakpad" href="http://code.google.com/p/google-breakpad/">Google Breakpad</a> (Firefox uses it as its crash reporter) which is written in C++, .NET platform was lacking a strong bug/crash reporter facility. For the NBusy project, I needed something that was written entirely in C# therefore was a native assembly that I could deploy to Global Assembly Cache. Thus, NBug project was born. NBug simply handles all the unhandled exceptions in any .NET executable. After the unhandled exceptions are caught, they are nicely wrapped in a bug report in .xml, which is then compressed and submitted back to the developer. Bug reports are automatically submitted to mailboxes, issue trackers, ftp servers, etc. or multiple destinations if configured so. To jump-start using NBug with your project, you can use <a title="NBug NuGet Package" href="http://nuget.org/List/Packages/NBug">NuGet</a> package. Just type '<span style="font-family: 'courier new', courier;">install-package nbug</span>' command in package manager console:</p>
-<p style="padding-left: 30px;"><span style="font-family: 'courier new', courier;">PM&gt; install-package nbug</span>
-  <span style="font-family: 'courier new', courier;">Successfully installed 'NBug 1.1.1'.</span>
-  <span style="font-family: 'courier new', courier;">Successfully added 'NBug 1.1.1' to WpfApplication.</span></p>
-  <p>You'll see the latest NBug package added to your project. Assuming that you have a WPF project, open up the App.xml.cs file and make sure that your <span style="font-family: 'courier new', courier;">App()</span> method method looks as below:</p>
+<!doctype html>
+<html lang="en">
 
-  <pre class="brush:csharp">public partial class App : Application
-    {
-      public App()
-      {
-        AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
-        Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
-        // Uncomment the following after testing to see that NBug is working as configured
-        // NBug.Settings.ReleaseMode = true;
-      }
-    }</pre>
-    <p>Now add some arbitrary code to throw an exception, say on a button click, and compile your project. Run the executable (outside the debugger) and when an exception is thrown, you should see the following dialog:</p>
-    <p><img class="aligncenter size-full wp-image-1378" title="NBug Minimal Dialog Box" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_minimal_screenshot.png" width="410" height="152" /></p>
-    <p>After clicking OK, you will see an "Exception_*******.zip" file generated right next to your executable file, which contains the complete bug report about the application. If you did configure NBug to display full exception information, you will see the following window:</p>
-    <p><img class="aligncenter size-full wp-image-1379" title="NBug Full Exception Dialog Box" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_screenshot.png" width="500" height="428" /></p>
-    <p>As you see, the detailed exception window provides full details about the exception. The user then has the option to either exit the application, or send a bug report then quit the application. The bug reports will be submitted to their preconfigured destinations. For instance if you configured bug reports to be submitted to an ftp server, you’ll get the bug reports in the following format:</p>
-    <p><img class="alignnone size-full wp-image-1381" title="" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/bug_reports.png" width="295" height="50" /></p>
-    <p>Each bug report contains default information about the unhandled exception + any additional information that you choose to include (i.e. memory minidump or a log file). If you configure NBug to submit bug reports to a bug tracker, you'll get very neat bug reports, specific to the version of your application that caused the exception. The following is a screenshot of a bug report that NBug submitted to a <a title="Redmine Issue Tracker" href="http://www.redmine.org/">Redmine</a> issue tracker:</p>
-    <p><a href="http://www.soygul.com/wp-content/uploads/2011/07/nbug_report_redmine.png"><img class="size-medium wp-image-1383 aligncenter" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_report_redmine-300x300.png" width="300" height="300" /></a></p>
+<head>
+  <meta charset="utf-8">
+  <title>NBug</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
 
-    <h2>Configuration</h2>
-    <p>Configuration of NBug is made extremely easy. You can do the configuration programmatically or you can use the bundled configurator tool to generate an .xml configuration file, to either ship along with your application or to embed in your app.config file (in the &lt;applicationSettings&gt; section). Following is a full example of WPF application using NBug with code-based configuration (intellisense documentation for each setting is very rich and always kept updated). Note that the following file is the App.xml.cs file:</p>
+<body>
+  <a class="home-button" href="/">Home</a>
+  <h1>NBug</h1>
+  <small>Jul 1, 2011</small>
 
-    <pre class="brush:csharp">namespace WpfApplication
-      {
-        using System;
-        using System.Windows;
+  <p>
+    <a href="http://www.soygul.com/projects/nbug/">
+      <img class="alignleft size-full wp-image-1326" style="margin-bottom: 0px;" title="NBug" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/NBug_logo.png" width="250" height="92" />
+    </a>NBug is an open-source .NET library created to automate the bug reporting process. It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack
+    trace and additional system information. It can also be set up as a user feedback system (i.e. for user feature requests). I have created NBug project to act as the error-reporting agent for <a title="NBusy - Communicator for the business minded.."
+    href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come. It is currently provided with LGPLv3 license and the source-code is hosted at <a title="NBug Source Code Repository" href="http://nbug.codeplex.com/">CodePlex</a>.
+    You can also use the <a title="NBug NuGet Package" href="http://nuget.org/List/Packages/NBug">NuGet</a> package to easily integrate NBug into your project. Read on to learn how start making use of NBug in your projects.</p>
 
-        public partial class App : Application
-        {
-          public App()
-          {
-            // Hook-up to all possible unhandled exception sources for WPF app
-            AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
-            Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
+  <h2 style="text-align: justify;">Quickstart</h2>
+  <p>Looking into <a title="Google Breakpad" href="http://code.google.com/p/google-breakpad/">Google Breakpad</a> (Firefox uses it as its crash reporter) which is written in C++, .NET platform was lacking a strong bug/crash reporter facility. For the NBusy
+    project, I needed something that was written entirely in C# therefore was a native assembly that I could deploy to Global Assembly Cache. Thus, NBug project was born. NBug simply handles all the unhandled exceptions in any .NET executable. After the
+    unhandled exceptions are caught, they are nicely wrapped in a bug report in .xml, which is then compressed and submitted back to the developer. Bug reports are automatically submitted to mailboxes, issue trackers, ftp servers, etc. or multiple destinations
+    if configured so. To jump-start using NBug with your project, you can use <a title="NBug NuGet Package" href="http://nuget.org/List/Packages/NBug">NuGet</a> package. Just type '
+    <span style="font-family: 'courier new', courier;">install-package nbug</span>' command in package manager console:</p>
+  <p style="padding-left: 30px;">
+    <span style="font-family: 'courier new', courier;">PM&gt; install-package nbug</span>
+    <span style="font-family: 'courier new', courier;">Successfully installed 'NBug 1.1.1'.</span>
+    <span style="font-family: 'courier new', courier;">Successfully added 'NBug 1.1.1' to WpfApplication.</span>
+  </p>
+  <p>You'll see the latest NBug package added to your project. Assuming that you have a WPF project, open up the App.xml.cs file and make sure that your
+    <span style="font-family: 'courier new', courier;">App()</span> method method looks as below:</p>
 
-            // NBug configuration (you can also choose to create xml configuration file)
-            NBug.Settings.StoragePath = NBug.Enums.StoragePath.IsolatedStorage;
-            NBug.Settings.UIMode = NBug.Enums.UIMode.Full;
-            NBug.Settings.Destination1 = "Type=Mail;From=me@mycompany.com;To=bugtracker@mycompany.com;SmtpServer=smtp.mycompany.com;";
+  <pre class="brush:csharp">public partial class App : Application { public App() { AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException; Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException; // Uncomment the following
+    after testing to see that NBug is working as configured // NBug.Settings.ReleaseMode = true; } }
+  </pre>
+  <p>Now add some arbitrary code to throw an exception, say on a button click, and compile your project. Run the executable (outside the debugger) and when an exception is thrown, you should see the following dialog:</p>
+  <p>
+    <img class="aligncenter size-full wp-image-1378" title="NBug Minimal Dialog Box" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_minimal_screenshot.png" width="410" height="152" />
+  </p>
+  <p>After clicking OK, you will see an "Exception_*******.zip" file generated right next to your executable file, which contains the complete bug report about the application. If you did configure NBug to display full exception information, you will see
+    the following window:</p>
+  <p>
+    <img class="aligncenter size-full wp-image-1379" title="NBug Full Exception Dialog Box" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_screenshot.png" width="500" height="428" />
+  </p>
+  <p>As you see, the detailed exception window provides full details about the exception. The user then has the option to either exit the application, or send a bug report then quit the application. The bug reports will be submitted to their preconfigured
+    destinations. For instance if you configured bug reports to be submitted to an ftp server, you’ll get the bug reports in the following format:</p>
+  <p>
+    <img class="alignnone size-full wp-image-1381" title="" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/bug_reports.png" width="295" height="50" />
+  </p>
+  <p>Each bug report contains default information about the unhandled exception + any additional information that you choose to include (i.e. memory minidump or a log file). If you configure NBug to submit bug reports to a bug tracker, you'll get very neat
+    bug reports, specific to the version of your application that caused the exception. The following is a screenshot of a bug report that NBug submitted to a <a title="Redmine Issue Tracker" href="http://www.redmine.org/">Redmine</a> issue tracker:</p>
+  <p>
+    <a href="http://www.soygul.com/wp-content/uploads/2011/07/nbug_report_redmine.png">
+      <img class="size-medium wp-image-1383 aligncenter" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_report_redmine-300x300.png" width="300" height="300" />
+    </a>
+  </p>
 
-            // Uncomment the following after testing to see that NBug is working as configured
-            // NBug.Settings.ReleaseMode = true;
-          }
-        }
-      }</pre>
-      <p>I should note that bug reports are not immediately submitted. Rather, when an unhandled exception is caught, it will be stored on the disk and will be submitted on the next application start. The bug reporter will also wait up to 30 seconds to make sure that application is initialized properly and only then it will start the bug-report submission process (on a background thread). So to verify that a bug report was actually submitted, you first need to crash your application, then restart it and wait for 30 seconds, and finally check your email (if you choose to send bug report to your mailbox). The line of code that controls the bug report destination is ‘<span style="font-family: 'courier new', courier;">NBug.Settings.Destination1 = ...</span>’. You should create a proper connection string to get the bug reports submitted properly. If there is a problem during submission, NBug internal error reporting window will pop up and warn you about it:</p>
-      <p><img class="aligncenter size-full wp-image-1386" title="NBug internal error reporter window" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_internal_error_reporter.png" width="549" height="569" /></p>
-      <p>The above window clearly demonstrates that some configuration error related to SMTP server was made so that NBug could not submit the bug report. Of course, you really would not like your users see this window when your application fails to submit a bug report on the client side. So after thoroughly testing your configuration and making sure that NBug functions as intended, you should enable the release mode via uncommenting the <span style="font-family: 'courier new', courier;">NBug.Settings.ReleaseMode = true;</span> line in the example given above. This will make sure that any internal exception will be silently swallowed (just as log4net, NLog, or any other logging framework does). NBug may also interfere with the Visual Studio debugger, catching any unhandled exception before it does. So enable the release mode as soon as you verify your configuration, so you can forget about the existence of NBug entirely, and let it do its job behind the scene.</p>
-      <p>Preparing connection strings by hand may be very cumbersome. You may also find code based configuration complicated or confusing. For these situations, NBug comes with a nicely packed configurator tool where you can generate xml based configuration files. You will find this tool especially useful while creating the connection strings. If you use code-based configuration, you can prepare the connection strings with this tool and save to settings to an arbitrary location, then copy the connection strings to your code-based configuration.</p>
-      <p><a href="http://www.soygul.com/wp-content/uploads/2011/07/nbug_configurator_screenshot.png"><img class="aligncenter size-medium wp-image-1388" title="NBug Configuration" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_configurator_screenshot-300x219.png" width="300" height="219" /></a></p>
-      <p>With the configurator tool, you can either generate standalone NBug.config configuration file to be shipped along with your application, or you can embed NBug settings directly into your app.config file. To do this, simply click the ‘Open’ button on the configurator and browse to your project app.config file. Then do the configuration and click the ‘Save’ button. This way all the NBug settings will be written as a separate section to your application’s configuration file and you will be saved from the hassle of dealing with additional configuration file. At any time, you can re-open app.config/NBug.config file and modify your configuration using the tool. When you are finished, you can also test your configuration using the ‘Save &amp; Run Test App’ button. When you click the test button, you will see the test application where you can generate various kinds of unhandled exceptions and see your new configuration in action. Once again, remember that after an exception is generated and application is closed, you should restart the application and wait some time to let NBug submit the bug report.</p>
-      <p><img class="aligncenter size-full wp-image-1389" title="NBug Testapp" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/testapp_crash.png" width="516" height="252" /></p>
+  <h2>Configuration</h2>
+  <p>Configuration of NBug is made extremely easy. You can do the configuration programmatically or you can use the bundled configurator tool to generate an .xml configuration file, to either ship along with your application or to embed in your app.config
+    file (in the &lt;applicationSettings&gt; section). Following is a full example of WPF application using NBug with code-based configuration (intellisense documentation for each setting is very rich and always kept updated). Note that the following
+    file is the App.xml.cs file:</p>
 
-      <h3 style="text-align: justify;">Conclusion</h2>
-      <p>Once setup properly, NBug is a monumental help in discovering and debugging bugs buried deep down in your application. Especially QA teams benefit from bug reports that are silently generated and submitted on the client side. Most of the time, unit and integration testing increase code quality but unhandled exceptions are inevitable, as developers cannot be prepared for all scenarios. Coupled with a proper auto updater system, using NBug is a very efficient way to increase code quality. NBug can also be selectively enabled for open/closed ‘Beta’ phases of application development, to get as much automated-bug reports as possible. If you ever need further assistance using NBug library, below is the full list of resources that you can always consult to:</p>
+  <pre class="brush:csharp">namespace WpfApplication { using System; using System.Windows; public partial class App : Application { public App() { // Hook-up to all possible unhandled exception sources for WPF app AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
+    Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException; // NBug configuration (you can also choose to create xml configuration file) NBug.Settings.StoragePath = NBug.Enums.StoragePath.IsolatedStorage; NBug.Settings.UIMode
+    = NBug.Enums.UIMode.Full; NBug.Settings.Destination1 = "Type=Mail;From=me@mycompany.com;To=bugtracker@mycompany.com;SmtpServer=smtp.mycompany.com;"; // Uncomment the following after testing to see that NBug is working as configured // NBug.Settings.ReleaseMode
+    = true; } } }
+  </pre>
+  <p>I should note that bug reports are not immediately submitted. Rather, when an unhandled exception is caught, it will be stored on the disk and will be submitted on the next application start. The bug reporter will also wait up to 30 seconds to make
+    sure that application is initialized properly and only then it will start the bug-report submission process (on a background thread). So to verify that a bug report was actually submitted, you first need to crash your application, then restart it
+    and wait for 30 seconds, and finally check your email (if you choose to send bug report to your mailbox). The line of code that controls the bug report destination is ‘
+    <span style="font-family: 'courier new', courier;">NBug.Settings.Destination1 = ...</span>’. You should create a proper connection string to get the bug reports submitted properly. If there is a problem during submission, NBug internal error reporting window will pop up and warn you about it:</p>
+  <p>
+    <img class="aligncenter size-full wp-image-1386" title="NBug internal error reporter window" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_internal_error_reporter.png" width="549" height="569" />
+  </p>
+  <p>The above window clearly demonstrates that some configuration error related to SMTP server was made so that NBug could not submit the bug report. Of course, you really would not like your users see this window when your application fails to submit a
+    bug report on the client side. So after thoroughly testing your configuration and making sure that NBug functions as intended, you should enable the release mode via uncommenting the
+    <span style="font-family: 'courier new', courier;">NBug.Settings.ReleaseMode = true;</span> line in the example given above. This will make sure that any internal exception will be silently swallowed (just as log4net, NLog, or any other logging framework does). NBug may also interfere with the Visual
+    Studio debugger, catching any unhandled exception before it does. So enable the release mode as soon as you verify your configuration, so you can forget about the existence of NBug entirely, and let it do its job behind the scene.</p>
+  <p>Preparing connection strings by hand may be very cumbersome. You may also find code based configuration complicated or confusing. For these situations, NBug comes with a nicely packed configurator tool where you can generate xml based configuration
+    files. You will find this tool especially useful while creating the connection strings. If you use code-based configuration, you can prepare the connection strings with this tool and save to settings to an arbitrary location, then copy the connection
+    strings to your code-based configuration.</p>
+  <p>
+    <a href="http://www.soygul.com/wp-content/uploads/2011/07/nbug_configurator_screenshot.png">
+      <img class="aligncenter size-medium wp-image-1388" title="NBug Configuration" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/nbug_configurator_screenshot-300x219.png" width="300" height="219" />
+    </a>
+  </p>
+  <p>With the configurator tool, you can either generate standalone NBug.config configuration file to be shipped along with your application, or you can embed NBug settings directly into your app.config file. To do this, simply click the ‘Open’ button on
+    the configurator and browse to your project app.config file. Then do the configuration and click the ‘Save’ button. This way all the NBug settings will be written as a separate section to your application’s configuration file and you will be saved
+    from the hassle of dealing with additional configuration file. At any time, you can re-open app.config/NBug.config file and modify your configuration using the tool. When you are finished, you can also test your configuration using the ‘Save &amp;
+    Run Test App’ button. When you click the test button, you will see the test application where you can generate various kinds of unhandled exceptions and see your new configuration in action. Once again, remember that after an exception is generated
+    and application is closed, you should restart the application and wait some time to let NBug submit the bug report.</p>
+  <p>
+    <img class="aligncenter size-full wp-image-1389" title="NBug Testapp" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/testapp_crash.png" width="516" height="252" />
+  </p>
 
-      <ul>
-        <li>Project home: <a href="http://nbug.codeplex.com/">http://nbug.codeplex.com/</a></li>
-        <li>NuGet package: <a href="http://nuget.org/packages/NBug">http://nuget.org/packages/NBug</a></li>
-        <li>Source code: <a href="https://github.com/soygul/NBug">https://github.com/soygul/NBug</a></li>
-        <li><a href="https://github.com/soygul/NBug/blob/master/Documentation/chm/NBug%201.1.1%20Docs.chm?raw=true">API Documentation</a> (.chm):</li>
-      </ul>
+  <h2 style="text-align: justify;">Conclusion</h2>
+  <p>Once setup properly, NBug is a monumental help in discovering and debugging bugs buried deep down in your application. Especially QA teams benefit from bug reports that are silently generated and submitted on the client side. Most of the time, unit
+    and integration testing increase code quality but unhandled exceptions are inevitable, as developers cannot be prepared for all scenarios. Coupled with a proper auto updater system, using NBug is a very efficient way to increase code quality. NBug
+    can also be selectively enabled for open/closed ‘Beta’ phases of application development, to get as much automated-bug reports as possible. If you ever need further assistance using NBug library, below is the full list of resources that you can always
+    consult to:</p>
+
+  <ul>
+    <li>Project home: <a href="http://nbug.codeplex.com/">http://nbug.codeplex.com/</a>
+    </li>
+    <li>NuGet package: <a href="http://nuget.org/packages/NBug">http://nuget.org/packages/NBug</a>
+    </li>
+    <li>Source code: <a href="https://github.com/soygul/NBug">https://github.com/soygul/NBug</a>
+    </li>
+    <li><a href="https://github.com/soygul/NBug/blob/master/Documentation/chm/NBug%201.1.1%20Docs.chm?raw=true">API Documentation</a> (.chm):</li>
+  </ul>
+</body>
+
+</html>

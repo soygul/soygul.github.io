@@ -1,22 +1,66 @@
-<p style="background-color: #efefef; padding: 10px; border-style: solid; border-color: #b5baba;">This project was sponsored by <strong>Türkiye Odalar ve Borsalar Birliği</strong> (The Union of Chambers and Commodity Exchanges of Turkey). I would like to thank anyone who contributed to this project for their valuable support.
-  <a href="http://tobb.org.tr/Sayfalar/Eng/AnaSayfa.aspx"><img class="size-full wp-image-855 aligncenter" style="margin-top: 11px; margin-bottom: 4px;" title="The Union of Chambers and Commodity Exchanges of Turkey Homepage" src="http://www.soygul.com/wp-content/uploads/2009/08/tobb_logo_en.png" alt="" width="650" height="100" /></a></p>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Microcontroller Based Linear Power Supply Unit</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+  <a class="home-button" href="/">Home</a>
+  <h1>Microcontroller Based Linear Power Supply Unit</h1>
+  <small>Aug 28, 2009</small>
+
+  <p style="background-color: #efefef; padding: 10px; border-style: solid; border-color: #b5baba;">This project was sponsored by
+    <strong>Türkiye Odalar ve Borsalar Birliği</strong> (The Union of Chambers and Commodity Exchanges of Turkey). I would like to thank anyone who contributed to this project for their valuable support.
+    <a href="http://tobb.org.tr/Sayfalar/Eng/AnaSayfa.aspx">
+      <img class="size-full wp-image-855 aligncenter" style="margin-top: 11px; margin-bottom: 4px;" title="The Union of Chambers and Commodity Exchanges of Turkey Homepage" src="http://www.soygul.com/wp-content/uploads/2009/08/tobb_logo_en.png" alt="" width="650"
+      height="100" />
+    </a>
+  </p>
 
   <h2>Building a µController Based Digital DC Bench Power Supply.. all from scratch</h2>
   <div style="margin-top: 17px;">
-    <div style="float: left;"><a href="projects/microcontroller-based-power-supply/"><img class="size-full wp-image-271" title="Digital DC Bench Power Supply" src="http://www.soygul.com/wp-content/uploads/2009/08/power_supply_front_back.jpg" alt="" width="416" height="396" /></a></div>
-    <div style="text-align: center;"><img style="margin-top: 6px;" title="Desktop Control Software" src="http://www.soygul.com/wp-content/uploads/2009/08/demo.jpg" alt="Desktop Control Software" width="221" height="157" />
+    <div style="float: left;">
+      <a href="projects/microcontroller-based-power-supply/">
+        <img class="size-full wp-image-271" title="Digital DC Bench Power Supply" src="http://www.soygul.com/wp-content/uploads/2009/08/power_supply_front_back.jpg" alt="" width="416" height="396" />
+      </a>
+    </div>
+    <div style="text-align: center;">
+      <img style="margin-top: 6px;" title="Desktop Control Software" src="http://www.soygul.com/wp-content/uploads/2009/08/demo.jpg" alt="Desktop Control Software" width="221" height="157" />
       <span style="font-size: 11px;">Desktop Control Software</span>
       <img style="margin-top: 8px;" title="Embedded Software Design" src="http://www.soygul.com/wp-content/uploads/2009/08/embedded_software.jpg" alt="Embedded Software Design" width="215" height="177" />
       <span style="font-size: 11px;">Embedded Software Design
-      </span></div>
+      </span>
     </div>
-    <p style="clear: both; padding-top: 12px; text-align: justify;"><strong>Abstract: </strong>As modern electronics favor the small, it is becoming more and more significant to design devices occupying least possible space while remaining rock solid. To achieve this, using microcontrollers seems to be the utmost solution. What can be done with discrete electronic circuits inside the devices can now easily be implemented within the embedded software of the µ controller (i.e. a short circuit protection can be implemented with a bulky crowbar circuit or simply with a fast loop in the µC). As a result, this projects aims at putting together a robust microcontroller based power supply unit with easy access lcd screen, 0-30V output range (up to 80W), computer connectivity and control, and with reliable overload protection all implemented with very fast control loops with a 2$ µC (Atmel ATmega8).</p>
-    <p><strong>Cost Analysis:</strong> Eventhough this sort of a device would cost a hefty amount if it was analog, the all-digital approach resulted in a very useful 50$ device! It may sound unbelievable but the most important parts; the regulator + the µC add up to only 30 dollars and all the software tools that I used were open source, so free. I should note that lab equipment used in this sort of a project (oscilloscope, multimeter, etc.) might add up to a couple of thousand dollars (unless you have a sponsor for that, or working in a lab).</p>
-    <!--more-->
-    <h2>1. <a name="intro"></a>Overview</h2>
-    <p>As a part of my diploma thesis work for my B.Sc.E. degree, I have built a digital bench power supply unit to be used in our semiconductor lab in automatizing some of the thin plane coating processes. As the project processed and the supply unit turned out to be a very solid one, lab staff decided to build up to 10 more replicates of this unit to further automate processes like thin film coating which uses chemical vapor deposition and ion implementation techniques. In addition to this, T.O.B.B. (The Union of Chambers and Commodity Exchanges of Turkey) become the sponsor of the project as a kind gesture in supporting scientific research in the area.</p>
-    <p>What made this project such a nice and successful one lies in its completeness. From hardware to software to peripherals, every single part of this unit is very well tested and complete. During my prototyping, I didn’t aim for what was not possible with the provided budget and time (about 2 months). Instead, I have built a nicely packed up unit with all the core functionality in there but no fuss.</p>
+  </div>
+  <p style="clear: both; padding-top: 12px; text-align: justify;">
+    <strong>Abstract: </strong>As modern electronics favor the small, it is becoming more and more significant to design devices occupying least possible space while remaining rock solid. To achieve this, using microcontrollers seems to be the utmost solution.
+    What can be done with discrete electronic circuits inside the devices can now easily be implemented within the embedded software of the µ controller (i.e. a short circuit protection can be implemented with a bulky crowbar circuit or simply with a
+    fast loop in the µC). As a result, this projects aims at putting together a robust microcontroller based power supply unit with easy access lcd screen, 0-30V output range (up to 80W), computer connectivity and control, and with reliable overload protection
+    all implemented with very fast control loops with a 2$ µC (Atmel ATmega8).</p>
+  <p>
+    <strong>Cost Analysis:</strong> Eventhough this sort of a device would cost a hefty amount if it was analog, the all-digital approach resulted in a very useful 50$ device! It may sound unbelievable but the most important parts; the regulator + the µC add
+    up to only 30 dollars and all the software tools that I used were open source, so free. I should note that lab equipment used in this sort of a project (oscilloscope, multimeter, etc.) might add up to a couple of thousand dollars (unless you have
+    a sponsor for that, or working in a lab).</p>
+  <!--more-->
+  <h2>1.
+    <a name="intro"></a>Overview</h2>
+  <p>As a part of my diploma thesis work for my B.Sc.E. degree, I have built a digital bench power supply unit to be used in our semiconductor lab in automatizing some of the thin plane coating processes. As the project processed and the supply unit turned
+    out to be a very solid one, lab staff decided to build up to 10 more replicates of this unit to further automate processes like thin film coating which uses chemical vapor deposition and ion implementation techniques. In addition to this, T.O.B.B.
+    (The Union of Chambers and Commodity Exchanges of Turkey) become the sponsor of the project as a kind gesture in supporting scientific research in the area.</p>
+  <p>What made this project such a nice and successful one lies in its completeness. From hardware to software to peripherals, every single part of this unit is very well tested and complete. During my prototyping, I didn’t aim for what was not possible
+    with the provided budget and time (about 2 months). Instead, I have built a nicely packed up unit with all the core functionality in there but no fuss.</p>
 
-    <h2>2. <a name="resources"></a>Resources</h2>
-    <p>As I couldn't find enough time to finish up this online article, I'm posting the full project report below (in .pdf format). If you like, you can download it to get the full insight into the project design, development, and deployment process (<a href="http://www.soygul.com/wp-content/uploads/2009/08/Diploma_Thesis.pdf">click here to download</a> or on the image below):</p>
-    <p><a href="http://www.soygul.com/wp-content/uploads/2009/08/Diploma_Thesis.pdf"><img class="aligncenter size-full wp-image-1052" title="Microcontroller Based Linear Power Supply Unit Project Report" src="http://www.soygul.com/wp-content/uploads/2009/08/diploma_thesis.png" alt="" width="148" height="210" /></a></p>
+  <h2>2.
+    <a name="resources"></a>Resources</h2>
+  <p>As I couldn't find enough time to finish up this online article, I'm posting the full project report below (in .pdf format). If you like, you can download it to get the full insight into the project design, development, and deployment process (<a href="http://www.soygul.com/wp-content/uploads/2009/08/Diploma_Thesis.pdf">click here to download</a>    or on the image below):</p>
+  <p>
+    <a href="http://www.soygul.com/wp-content/uploads/2009/08/Diploma_Thesis.pdf">
+      <img class="aligncenter size-full wp-image-1052" title="Microcontroller Based Linear Power Supply Unit Project Report" src="http://www.soygul.com/wp-content/uploads/2009/08/diploma_thesis.png" alt="" width="148" height="210" />
+    </a>
+  </p>
+</body>
+
+</html>
