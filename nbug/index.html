@@ -13,14 +13,19 @@
   <small>Jul 1, 2011</small>
 
   <p>
-    <a href="http://www.soygul.com/projects/nbug/">
-      <img class="alignleft size-full wp-image-1326" style="margin-bottom: 0px;" title="NBug" alt="" src="http://www.soygul.com/wp-content/uploads/2011/07/NBug_logo.png" width="250" height="92" />
-    </a>NBug is an open-source .NET library created to automate the bug reporting process. It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack
-    trace and additional system information. It can also be set up as a user feedback system (i.e. for user feature requests). I have created NBug project to act as the error-reporting agent for <a title="NBusy - Communicator for the business minded.."
-    href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come. It is currently provided with LGPLv3 license and the source-code is hosted at <a title="NBug Source Code Repository" href="http://nbug.codeplex.com/">CodePlex</a>.
-    You can also use the <a title="NBug NuGet Package" href="http://nuget.org/List/Packages/NBug">NuGet</a> package to easily integrate NBug into your project. Read on to learn how start making use of NBug in your projects.</p>
+    NBug is an open-source .NET library created to automate the bug reporting process.
+    It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack trace and additional system information.
+    It can also be set up as a user feedback system (i.e. for user feature requests).
+    I have created NBug project to act as the error-reporting agent for <a href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come.
+    It is currently provided with LGPLv3 license and the source-code is hosted at <a href="http://nbug.codeplex.com/">CodePlex</a>.
+    You can also use the <a href="http://nuget.org/List/Packages/NBug">NuGet</a> package to easily integrate NBug into your project.
+    Read on to learn how start making use of NBug in your projects.
+  </p>
 
-  <h2 style="text-align: justify;">Quickstart</h2>
+  <img alt="NBug Logo" src="logo.png">
+
+  <h2>Quickstart</h2>
+
   <p>Looking into <a title="Google Breakpad" href="http://code.google.com/p/google-breakpad/">Google Breakpad</a> (Firefox uses it as its crash reporter) which is written in C++, .NET platform was lacking a strong bug/crash reporter facility. For the NBusy
     project, I needed something that was written entirely in C# therefore was a native assembly that I could deploy to Global Assembly Cache. Thus, NBug project was born. NBug simply handles all the unhandled exceptions in any .NET executable. After the
     unhandled exceptions are caught, they are nicely wrapped in a bug report in .xml, which is then compressed and submitted back to the developer. Bug reports are automatically submitted to mailboxes, issue trackers, ftp servers, etc. or multiple destinations
