@@ -14,7 +14,7 @@ body {
   line-height: 1.42857;
 }
 
-a > img {
+img {
   margin: 25px auto;
   display: block;
   max-width: 100%;

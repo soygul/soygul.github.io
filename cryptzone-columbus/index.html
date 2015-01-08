@@ -13,23 +13,26 @@
   <small>Jan 7, 2012</small>
 
   <h2>A Brand-new Application Control and Whitelisting Solution.. code named Columbus</h2>
+
+  <img alt="Cryptzone Columbus" src="cryptzone-columbus.png">
+
   <p>
-    <a href="http://www.soygul.com/projects/cryptzone-columbus/">
-      <img class="alignleft size-medium wp-image-1417" style="margin-bottom: 0px; margin-right: 10px;" title="Cryptzone Columbus" alt="" src="http://www.soygul.com/wp-content/uploads/2011/10/cryptzone_columbus-300x156.png" width="300" height="156" />
-    </a>At <a title="Cryptzone Group AB" href="http://www.cryptzone.com/">Cryptzone AB</a>, I was initially involved in a project code named Columbus. With a team of five, 2 for kernel driver, 2 for management server, I was in charge of developing the
-    client agent ground up. This agent, as you will see, provides application control and whitelisting capabilities to the installed computer. With remote management features, this is a new product targeted at enterprise markets with unmatched features,
-    thanks to extensive use of .NET Framework, in both the client agent and the management server. It has a state of the art 4-tier architecture with a Windows service which enforces computer security policies, and 3 different user interfaces; GUI,
-    <acronym title="Command Line Interface">CLI</acronym> (Console), and PowerShell to interact with the service via
-    <acronym title="Inter Process Communication">IPC</acronym>, thanks to the utilization of
-    <acronym title="Modal View Controller">MVC </acronym>architecture. It also uses the most current technologies ranging from Windows Communication Foundation (WCF) 4.0, Entity Framework 4.2, SQL Server Compact (SQL CE) 4.0, to tools like Ninject (for DI), NUnit + Moq (for TDD), and countless
-    more. With heavy emphasis on SOLID principles, this project marks a milestone for Cryptzone, and for me. Read on to learn more about the solid architecture and technology of this great new project.</p>
+    At <a href="http://www.cryptzone.com/">Cryptzone AB</a>, I was initially involved in a project code named Columbus.
+    With a team of five, 2 for kernel driver, 2 for management server, I was in charge of developing the client agent ground up.
+    This agent, as you will see, provides application control and whitelisting capabilities to the installed computer.
+    With remote management features, this is a new product targeted at enterprise markets with unmatched features, thanks to extensive use of .NET Framework, in both the client agent and the management server.
+    It has a state of the art 4-tier architecture with a Windows service which enforces computer security policies, and 3 different user interfaces; GUI, <acronym title="Command Line Interface">CLI</acronym> (Console), and PowerShell to interact with the service via <acronym title="Inter Process Communication">IPC</acronym>, thanks to the utilization of <acronym title="Modal View Controller">MVC </acronym>architecture.
+    It also uses the most current technologies ranging from Windows Communication Foundation (WCF) 4.0, Entity Framework 4.2, SQL Server Compact (SQL CE) 4.0, to tools like Ninject (for DI), NUnit + Moq (for TDD), and countless more.
+    With heavy emphasis on SOLID principles, this project marks a milestone for Cryptzone, and for me.
+    Read on to learn more about the solid architecture and technology of this great new project.
+  </p>
 
   <h2>Overview</h2>
+
+  <img class="alignleft size-medium wp-image-1433" style="margin-bottom: 0px;" title="Cryptzone Columbus Enterprise Architecture" alt="" src="cryptzone-columbus-Enterprise-Architecture.png">
+
   <p>
-    <a href="http://www.soygul.com/wp-content/uploads/2011/10/Cryptzone-Columbus-Enterprise-Architecture.png">
-      <img class="alignleft size-medium wp-image-1433" style="margin-bottom: 0px;" title="Cryptzone Columbus Enterprise Architecture" alt="" src="http://www.soygul.com/wp-content/uploads/2011/10/Cryptzone-Columbus-Enterprise-Architecture-300x198.png" width="300"
-      height="198" />
-    </a>Columbus essentially is an application control solution with the paramount reliability and manageability. To provide these qualities, separate client agent, management server, and cloud services are provided. Client agent is the package that is
+    Columbus essentially is an application control solution with the paramount reliability and manageability. To provide these qualities, separate client agent, management server, and cloud services are provided. Client agent is the package that is
     installed on every machine that application control and whitelisting policy is to be enforced. Management server acts as a central management console for all separate clients on the same network. Finally, the cloud services provide updates for common
     trusted application and publishers list. With a personal or freeware license, the client agent can also be used without the management server, directly giving the control to the end user while still providing to cloud services. The rest of this article
     will mainly concentrate on the client agent architecture, as I've designed it ground up.</p>
