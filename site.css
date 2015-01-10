@@ -31,3 +31,7 @@ img {
   color: lightgrey;
   margin-left: 10px;
 }
+
+pre {
+  overflow-y: auto;
+}
