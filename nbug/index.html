@@ -58,10 +58,12 @@
     {
       public App()
       {
-        AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
-        Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
         // Uncomment the following after testing to see that NBug is working as configured
         // NBug.Settings.ReleaseMode = true;
+        // todo: add other configuration options here
+        
+        AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
+        Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
       }
     }
   </pre>
@@ -116,17 +118,17 @@
       {
         public App()
         {
-          // Hook-up to all possible unhandled exception sources for WPF app
-          AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
-          Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
+          // Uncomment the following after testing to see that NBug is working as configured
+          // NBug.Settings.ReleaseMode = true;
 
           // NBug configuration (you can also choose to create xml configuration file)
           NBug.Settings.StoragePath = NBug.Enums.StoragePath.IsolatedStorage;
           NBug.Settings.UIMode = NBug.Enums.UIMode.Full;
           NBug.Settings.Destination1 = "Type=Mail;From=me@mycompany.com;To=bugtracker@mycompany.com;SmtpServer=smtp.mycompany.com;";
 
-          // Uncomment the following after testing to see that NBug is working as configured
-          // NBug.Settings.ReleaseMode = true;
+          // Hook-up to all possible unhandled exception sources for WPF app, after NBug is configured
+          AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
+          Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
         }
       }
     }
