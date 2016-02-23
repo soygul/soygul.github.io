@@ -27,9 +27,17 @@ img {
   font-weight: bold;
 }
 
+.posts li {
+  margin-bottom: 10px;
+}
+
 .posts small {
   color: lightgrey;
   margin-left: 10px;
+}
+
+.posts div {
+  font-size: small;
 }
 
 pre {
