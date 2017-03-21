@@ -16,17 +16,17 @@
 
   <p>
     <a href="https://www.cryptzone.com/products/appgate">AppGate</a> (Application Gateway) is a VPN/network access control solution.
-    It provides granular and secure access to applications and services hosted anywhere.
+    It provides granular access to applications and services through a secure VPN connection.
     I will start with the interesting bits and jump directly to the tech stack and my role in the project, followed by the architectural overview.
   </p>
 
   <h2>Tech Stack</h2>
 
   <ul>
-    <li><strong>Backend</strong>: No publicly disclosed info so cannot mention this part.</li>
+    <li><strong>Backend</strong>: No publicly disclosed info so cannot mention this part at this time.</li>
     <li><strong>Management Console</strong>: Based on my open source project <a href="https://github.com/soygul/koan">KOAN</a>. AngularJS and Node.js.</li>
     <li><strong>Client Core</strong>: Xamarin and C#. Shared code on all supported dekstop and mobile platforms.</li>
-    <li><strong>Client UI</strong>: Polymer app running in Electron on desktops, WebView on mobiles.</li>
+    <li><strong>Client UI</strong>: Polymer app running in Electron on desktops, in WebView on mobiles.</li>
   </ul>
 
   <p>
@@ -50,16 +50,34 @@
   </p>
 
   <p>
-    AppGate is a VPN solution hence its primary purpose is to securely give access to resources.
+    AppGate is a VPN solution hence its primary purpose is to securely provice access to resources.
+    Obviously resources like web services can be hosted on multiple locations; in house, up in the cloud, in a data center, etc.
+    Each service location needs to have a gateway deployed so AppGate clients can establish VPN connection to these gateways and provide users access to resources.
+    We also need a central "controller" to orhecstrate all gateways and clients.
+    Following diagram nicely summarizes this architecture:
   </p>
 
   <img alt="System Overview" src="overview.png">
 
   <p>
-    Blah.
+    AppGate clients create a virtual network adapter per connected gateway to establish the VPN.
+    Once the user authenticates towards a central controller cluster, client automatically established connection to gateways according to resources being accessed.
+    Each gateway is an Ubuntu based virtual machine that can be hosted just about anywhere.
+    System configuration is faciliated by the first run wizard and a simple management console.
+    Following diagram demonstrates a typical client-gateway-controller communication:
   </p>
 
   <img alt="Connection Architecture" src="connection.png">
+
+  <p>
+    I won't go into further detail about the architectural choices and system design due to this being a security product.
+    However following presentation is publicly available and elaborates on points that I mentioned in this article.
+    On a final note, AppGate is also termed as a "Software Defined Perimeter" product, and idea elaborated on the presentation.
+  </p>
+
+  <h2>Concept Presentation</h2>
+
+  <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ysi_9c5fmBg?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
   <h2>Links</h2>
 
