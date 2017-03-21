@@ -50,10 +50,10 @@
   </p>
 
   <p>
-    AppGate is a VPN solution hence its primary purpose is to securely provice access to resources.
+    AppGate is a VPN solution hence its primary purpose is to securely provide access to resources.
     Obviously resources like web services can be hosted on multiple locations; in house, up in the cloud, in a data center, etc.
     Each service location needs to have a gateway deployed so AppGate clients can establish VPN connection to these gateways and provide users access to resources.
-    We also need a central "controller" to orhecstrate all gateways and clients.
+    We also need a central "controller" to orchestrate all gateways and clients.
     Following diagram nicely summarizes this architecture:
   </p>
 
@@ -63,7 +63,7 @@
     AppGate clients create a virtual network adapter per connected gateway to establish the VPN.
     Once the user authenticates towards a central controller cluster, client automatically established connection to gateways according to resources being accessed.
     Each gateway is an Ubuntu based virtual machine that can be hosted just about anywhere.
-    System configuration is faciliated by the first run wizard and a simple management console.
+    System configuration is facilitated by the first run wizard and a simple management console.
     Following diagram demonstrates a typical client-gateway-controller communication:
   </p>
 
