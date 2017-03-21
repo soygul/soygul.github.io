@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "live-server"
+    "start": "live-server --ignore=node_modules/,.idea ./"
   },
   "devDependencies": {
     "live-server": "1.2.0"
