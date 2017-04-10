@@ -17,7 +17,7 @@
     It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack trace and additional system information.
     It can also be set up as a user feedback system (i.e. for user feature requests).
     I have created NBug project to act as the error-reporting agent for <a href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come.
-    It is currently provided with LGPLv3 license and the source-code is hosted at <a href="http://nbug.codeplex.com/">CodePlex</a>.
+    It is currently provided with LGPLv3 license and the source-code is hosted at <a href="https://github.com/soygul/NBug">GitHub</a>.
     You can also use the <a href="http://nuget.org/List/Packages/NBug">NuGet</a> package to easily integrate NBug into your project.
     Read on to learn how start making use of NBug in your projects.
   </p>
@@ -61,7 +61,7 @@
         // Uncomment the following after testing to see that NBug is working as configured
         // NBug.Settings.ReleaseMode = true;
         // todo: add other configuration options here
-        
+
         AppDomain.CurrentDomain.UnhandledException += NBug.Handler.UnhandledException;
         Application.Current.DispatcherUnhandledException += NBug.Handler.DispatcherUnhandledException;
       }
