@@ -15,7 +15,7 @@
 
   <img alt="Laser Interference Pattern Enumerator" src="laser_interference_pattern_enumerator.jpg">
 
-  <h2>Counting Laser Diffraction &amp; Interference Patterns Using LDR (Photoresistor)</h2>
+  <h2>Counting Laser Diffraction &amp; Interference Patterns Using Photoresistors</h2>
 
   <p>
     <a title="Definition of &quot;Michelson Interferometer&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/Michelson_interferometer">Michelson Interferometer</a> is best used in calculating the index of refraction of gasses and transparent matter
@@ -27,7 +27,7 @@
     for counting all kinds of patterns on any object.</p>
   <p style="text-align: justify; clear: both;">
     <img class="alignright size-full wp-image-481" title="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" src="laser_interference_patterns.jpg"
-    alt="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" width="220" height="167" />For counting laser interference patterns like the ones to the right, this project provides an excellent resource. Not only will it be able to enumerate through the patterns at lightning speed (my LDR provided me with 30 switches per second), but it
+    alt="Optical interference between two point sources for different wavelengths and source separations (ref: Wikipedia)" width="220" height="167" />For counting laser interference patterns like the ones to the right, this project provides an excellent resource. Not only will it be able to enumerate through the patterns at lightning speed (my LDR [Light Dependent Resistor] provided me with 30 switches per second), but it
     will also provide you with utmost tool for counting any other pattern and count them quite precisely.</p>
   <p>As I took a very straightforward approach into this design, the project content is below and all in one page, as you will easily be able to print this page and use it as a guide.</p>
   <!--more-->
@@ -128,9 +128,9 @@
       width="650" height="383" />
     </a>
   </p>
-  <p>Above is the complete schematics in .png format (click on the image for full size). The above circuit diagram is drawn with Labcenter Proteus, which provides full simulation features for this sort of circuits. Look at how the light source and LDR are
+  <p>Above is the complete schematics in .png format (click on the image for full size). The above circuit diagram is drawn with Labcenter Proteus, which provides full simulation features for this sort of circuits. Look at how the light source and LDR (Ligth Dependent Resistor / Photoresistor) are
     simulated. You can easily move the light source away from or towards the
-    <acronym title="Ligth Dependent Resistor or Photoresistor">LDR</acronym> and see how the circuit reacts to changes in light intensity (as in pattern transitions like moving from darker side of a pattern to a lighter portion of it). One full cycle (moving from dark to light and then back to dark) will act
+    LDR and see how the circuit reacts to changes in light intensity (as in pattern transitions like moving from darker side of a pattern to a lighter portion of it). One full cycle (moving from dark to light and then back to dark) will act
     as a trigger and counter will increment by one. If you want to test it for yourself, <a href="Enumerator_Schematics.DSN">here is the full schematics file in .DSN format</a>, which you will need at least
     a demo version of Labcenter Proteus VSM suite which can be <a title="Labcenter Proteus VSM Suite Demo Download" href="http://www.labcenter.co.uk/download/prodemo_autodl_general.cfm">downloaded here</a>.</p>
   <p>You can see that I chose <a title="Explanation of &quot;CMOS 4026&quot; on Wikipedia" href="http://en.wikipedia.org/wiki/4026#4026_counter_and_display_decoder">4026</a> counter and display decoder from CMOS 4000 series as it is one of the best ICs out
@@ -142,7 +142,7 @@
     <a name="circuit_design"></a>Circuit Design</h4>
   <p>
     <img class="alignleft size-full wp-image-557" style="margin-bottom: 0px; margin-right: 10px;" src="circuit_board_1.jpg" alt="circuit_board_1" width="416" height="202" />Even though Labcenter Proteus software allows easily converting circuit diagrams into
-    <acronym title="Printed Circuit Board">PCB</acronym> layouts, I decided to use a basic stripboard with copper soldering pads on each hole (which is actually called a perfboard). This way I avoided going to an electronics shop to print the circuit board. This is a relatively simple circuit
+    <abbr title="Printed Circuit Board">PCB</abbr> layouts, I decided to use a basic stripboard with copper soldering pads on each hole (which is actually called a perfboard). This way I avoided going to an electronics shop to print the circuit board. This is a relatively simple circuit
     so stripboard fits in nicely but anyone intending to go with the PCB, demo version of Proteus can be used to convert the circuit diagram into a circuit board.</p>
   <p style="clear: both; text-align: justify;">
     <a href="circuit_board_2.jpg">
@@ -200,7 +200,7 @@
     an ideal choice for this project. In addition, since LDR has way lower resistance compared to photodiode when fully illuminated.</p>
   <p style="text-align: justify; clear: both;">
     <img class="alignright size-full wp-image-633" src="4026_chip.jpg" alt="" width="150" height="179" />4026 counter/decoder chip is basically the most important digital part in this circuit. As it is a
-    <acronym title="Complementary Metal–Oxide–Semiconductor">CMOS</acronym> series of chip, it has a very wide range of operation in terms of input voltage. Any input voltage between 3V and 15V will be sufficient for this chip to be fully functional (anything above 20V will fry the chip). For that reason, I
+    <abbr title="Complementary Metal–Oxide–Semiconductor">CMOS</abbr> series of chip, it has a very wide range of operation in terms of input voltage. Any input voltage between 3V and 15V will be sufficient for this chip to be fully functional (anything above 20V will fry the chip). For that reason, I
     didn’t specify the input voltages in the schematics. 4xAA batteries, any 6V - 12V wall adapter, or a cell phone charger will be more than enough. As with any CMOS chip, 4026 have very high impedance at input pins. Due to that reason, any input pin
     left without a connection will float freely (i.e. it will rapidly switch between 0 and 1). To prevent that, any unused input should be connected to circuit ground. If you remain loyal to the provided circuit diagram, there should be no problem in
     this compartment.</p>
@@ -212,7 +212,7 @@
     <a name="components_POT"></a>As for the light intensity calibration purposes, two 10K linear POTs are used like the one on the right are used. First POT is connected in series with the LDR and is used for filtering the ambiance light, hence the question; “How dark is dark?”.
     For situations where readings will not be taken from patterns projected on the screen but the patterns will be counted on real surfaces (like a metal board or even a stonewall or a cat’s fur!), adjusting this pot fine tunes the circuit to “sense”
     the darker portion of the pattern and differentiate it from the brighter side (in electronic sense, you are just adjusting the resistance of the
-    <acronym title="Clock input pulse">CLK</acronym> pulse threshold in terms of Ohms as seen from the circuit diagram). As you could guess, sensing this darker portion of the pattern will generate a digital equivalent of “0”. The second POT is used to adjust the circuit to match the brightness
+    <abbr title="Clock input pulse">CLK</abbr> pulse threshold in terms of Ohms as seen from the circuit diagram). As you could guess, sensing this darker portion of the pattern will generate a digital equivalent of “0”. The second POT is used to adjust the circuit to match the brightness
     of the lighter side of the pattern or the intensity of the laser used (basically you are adjusting the value of the pull-down resistor). The first setting (the blue switch) is less crucial but it is still useful in situations where the darker side
     of the pattern is actually not that dark which may be due to faded colors or ambiance light. In most cases, just adjusting the second (red) switch and leaving the blue switch at "MIN" will be enough.
     <em>(see the calibration guide below for details)</em>
