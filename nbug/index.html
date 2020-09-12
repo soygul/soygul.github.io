@@ -15,12 +15,12 @@
 
   <p>
     NBug is an open-source .NET library created to automate the bug reporting process.
-    It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack trace and additional system information.
+    It automatically catches all the unhandled exceptions and selectively sends bug reports, crash reports with memory minidumps, error/exception reports with stack trace and additional system information.
     It can also be set up as a user feedback system (i.e. for user feature requests).
-    I have created NBug project to act as the error-reporting agent for <a href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come.
+    I have created NBug project to act as the error-reporting agent for <a href="http://www.nbusy.com/">NBusy</a>, which is a long living project, so NBug will be supported for many years to come.
+    It has been successfully used in many projects including <a href="https://github.com/gitextensions/gitextensions">Git Extensions</a>, as well as my several other projects.
     It is currently provided with LGPLv3 license and the source-code is hosted at <a href="https://github.com/soygul/NBug">GitHub</a>.
     You can also use the <a href="http://nuget.org/List/Packages/NBug">NuGet</a> package to easily integrate NBug into your project.
-    It has been successfully used in many projects including <a href="https://github.com/gitextensions/gitextensions">Git Extensions</a>, as well as my own projects.
     Read on to learn how start making use of NBug in your projects.
   </p>
 
@@ -52,7 +52,7 @@
 
   <p>
     You'll see the latest NBug package added to your project.
-    Assuming that you have a WPF project, open up the App.xml.cs file and make sure that your <code>App()</code> method method looks as below:
+    Assuming that you have a WPF project, open up the App.xml.cs file and make sure that your <code>App()</code> method method looks as below:
   </p>
 
   <pre>
@@ -96,7 +96,7 @@
   <p>
     Each bug report contains default information about the unhandled exception + any additional information that you choose to include (i.e. memory minidump or a log file).
     If you configure NBug to submit bug reports to a bug tracker, you'll get very neat bug reports, specific to the version of your application that caused the exception.
-    The following is a screenshot of a bug report that NBug submitted to a <a href="http://www.redmine.org/">Redmine</a> issue tracker:
+    The following is a screenshot of a bug report that NBug submitted to a <a href="http://www.redmine.org/">Redmine</a> issue tracker:
   </p>
 
   <a href="redmine-reporter.png"><img alt="Redmine reporter" src="redmine-reporter.png"></a>
@@ -105,9 +105,9 @@
 
   <p>
     Configuration of NBug is made extremely easy.
-    You can do the configuration programmatically or you can use the bundled configurator tool to generate an .xml configuration file, to either ship along with your application or to embed in your app.config file (in the &lt;applicationSettings&gt; section).
+    You can do the configuration programmatically or you can use the bundled configurator tool to generate an .xml configuration file, to either ship along with your application or to embed in your app.config file (in the &lt;applicationSettings&gt; section).
     Following is a full example of WPF application using NBug with code-based configuration (intellisense documentation for each setting is very rich and always kept updated).
-    Note that the following file is the App.xml.cs file:
+    Note that the following file is the App.xml.cs file:
   </p>
 
   <pre>
@@ -191,8 +191,8 @@
   </p>
 
   <ul>
-    <li>Project home: <a href="https://github.com/soygul/NBug">https://github.com/soygul/NBug</a></li>
-    <li>NuGet package: <a href="https://www.nuget.org/packages/NBug/">https://www.nuget.org/packages/NBug/</a></li>
+    <li>Project home: <a href="https://github.com/soygul/NBug">https://github.com/soygul/NBug</a></li>
+    <li>NuGet package: <a href="https://www.nuget.org/packages/NBug/">https://www.nuget.org/packages/NBug/</a></li>
     <li><a href="nbug-1.1-docs.chm">API Documentation</a> (.chm):</li>
   </ul>
 </body>
