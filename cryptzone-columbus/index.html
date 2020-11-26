@@ -22,7 +22,7 @@
     With a team of five, 2 for kernel driver, 2 for management server, I was in charge of developing the client agent ground up.
     This agent, as you will see, provides application control and whitelisting capabilities to the installed computer.
     With remote management features, this is a new product targeted at enterprise markets with unmatched features, thanks to extensive use of .NET Framework, in both the client agent and the management server.
-    It has a state of the art 4-tier architecture with a Windows service which enforces computer security policies, and 3 different user interfaces; GUI, <acronym title="Command Line Interface">CLI</acronym> (Console), and PowerShell to interact with the service via <acronym title="Inter Process Communication">IPC</acronym>, thanks to the utilization of <acronym title="Modal View Controller">MVC </acronym>architecture.
+    It has a state of the art 4-tier architecture with a Windows service which enforces computer security policies, and 3 different user interfaces; GUI, <acronym title="Command Line Interface">CLI</acronym> (Console), and PowerShell to interact with the service via <acronym title="Inter Process Communication">IPC</acronym>, thanks to the utilization of <acronym title="Modal View Controller">MVC </acronym>architecture.
     It also uses the most current technologies ranging from Windows Communication Foundation (WCF) 4.0, Entity Framework 4.2, SQL Server Compact (SQL CE) 4.0, to tools like Ninject (for DI), NUnit + Moq (for TDD), and countless more.
     With heavy emphasis on SOLID principles, this project marks a milestone for Cryptzone, and for me.
     Read on to learn more about the solid architecture and technology of this great new project.
@@ -52,7 +52,7 @@
     Second, it communicates directly and securely with the application’s kernel level driver and keeps the driver’s policy cache in sync with the safe policy database.
     So even if the Windows service goes down (which is restarted automatically anyway), the kernel level driver continues to monitor and protect processes and files and enforce cached security policy.
     Thirdly, the Windows service communicates with the user interface process, which keeps the user informed of the current security status and other up-to-date information.
-    This inter process communication is designed to utilize named-pipes via <a href="http://msdn.microsoft.com/en-us/netframework/aa663324">Windows Communication Foundation</a> 4.0 <a href="http://msdn.microsoft.com/en-us/library/ms731291.aspx">net.pipe</a> interface, which provides a secure and lightning fast communication channel.
+    This inter process communication is designed to utilize named-pipes via <a href="http://msdn.microsoft.com/en-us/netframework/aa663324">Windows Communication Foundation</a> 4.0 <a href="http://msdn.microsoft.com/en-us/library/ms731291.aspx">net.pipe</a> interface, which provides a secure and lightning fast communication channel.
     This clear separation of the Windows service process and the user interface process provides maximum availability, where the service continues to function even when the user interface crashes or when there is no user logged in.
     Finally, it connects to the central management server, from which the general security policies are distributed and managed by the system administrators.
   </p>
@@ -96,7 +96,7 @@
   <p>
     Columbus platform as a whole was made possible with the use of latest technology, and above anything, Microsoft .NET Framework.
     Since .NET provides the basis for developing web apps, web services, and desktop applications with the use of same set of tools, it was a natural choice for this project.
-    Its excellent interoperability with native components (the kernel driver) over <a href="http://en.wikipedia.org/wiki/Platform_Invocation_Services">P/Invoke services</a> makes it the almighty tool that we longed for.
+    Its excellent interoperability with native components (the kernel driver) over <a href="http://en.wikipedia.org/wiki/Platform_Invocation_Services">P/Invoke services</a> makes it the almighty tool that we longed for.
     In addition, there are best of their breed 3rd party tools to further aid the development.
     First off, what gave the beautiful look to the current client agent GUI are <a href="http://devexpress.com/Products/NET/Controls/WinForms/">DevExpress</a> WinForms controls.
     They are skinable by default and come with tons of extra features, which users can adjust as they please.
